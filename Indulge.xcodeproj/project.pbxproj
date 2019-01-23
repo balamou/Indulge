@@ -97,12 +97,9 @@
 		ED41DC8F21F8040000782353 /* Indulge */ = {
 			isa = PBXGroup;
 			children = (
-				ED41DC9021F8040000782353 /* AppDelegate.swift */,
-				ED41DC9221F8040000782353 /* ViewController.swift */,
-				ED41DC9421F8040000782353 /* Main.storyboard */,
-				ED41DC9721F8040100782353 /* Assets.xcassets */,
-				ED41DC9921F8040100782353 /* LaunchScreen.storyboard */,
-				ED41DC9C21F8040100782353 /* Info.plist */,
+				ED41DCBE21F8043A00782353 /* Controller */,
+				ED41DCBF21F8045D00782353 /* View */,
+				ED41DCC021F8047200782353 /* Supporting files */,
 			);
 			path = Indulge;
 			sourceTree = "<group>";
@@ -123,6 +120,33 @@
 				ED41DCB221F8040100782353 /* Info.plist */,
 			);
 			path = IndulgeUITests;
+			sourceTree = "<group>";
+		};
+		ED41DCBE21F8043A00782353 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED41DC9021F8040000782353 /* AppDelegate.swift */,
+				ED41DC9221F8040000782353 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED41DCBF21F8045D00782353 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED41DC9721F8040100782353 /* Assets.xcassets */,
+				ED41DC9421F8040000782353 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED41DCC021F8047200782353 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				ED41DC9921F8040100782353 /* LaunchScreen.storyboard */,
+				ED41DC9C21F8040100782353 /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
