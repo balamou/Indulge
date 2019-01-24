@@ -18,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        // if (userLoggedIn != False) // TODO: Jad
+        // {
         window!.rootViewController = WelcomeViewController()
         window!.makeKeyAndVisible()
+        // } else {
+        
+        
+        // }
         
         return true
     }

@@ -105,8 +105,8 @@
 			children = (
 				ED41DC9C21F8040100782353 /* Info.plist */,
 				ED41DCC521F80B8800782353 /* Resources */,
-				ED41DCBE21F8043A00782353 /* Controller */,
-				ED41DCBF21F8045D00782353 /* View */,
+				ED41DCBE21F8043A00782353 /* Main */,
+				ED41DCCA21F96CE300782353 /* Sign in Flow */,
 				ED41DCC021F8047200782353 /* Supporting files */,
 			);
 			path = Indulge;
@@ -130,20 +130,12 @@
 			path = IndulgeUITests;
 			sourceTree = "<group>";
 		};
-		ED41DCBE21F8043A00782353 /* Controller */ = {
+		ED41DCBE21F8043A00782353 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				ED41DC9021F8040000782353 /* AppDelegate.swift */,
-				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		ED41DCBF21F8045D00782353 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		ED41DCC021F8047200782353 /* Supporting files */ = {
@@ -164,6 +156,14 @@
 				ED41DCC821F9680500782353 /* UIView+extension.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED41DCCA21F96CE300782353 /* Sign in Flow */ = {
+			isa = PBXGroup;
+			children = (
+				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
+			);
+			path = "Sign in Flow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
