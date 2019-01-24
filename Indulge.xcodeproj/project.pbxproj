@@ -16,6 +16,7 @@
 		ED41DCC221F8064D00782353 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC121F8064D00782353 /* Colors.swift */; };
 		ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC321F8069900782353 /* UIColor+extension.swift */; };
 		ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */; };
+		ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC821F9680500782353 /* UIView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		ED41DCC121F8064D00782353 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ED41DCC321F8069900782353 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+extension.swift"; sourceTree = "<group>"; };
+		ED41DCC821F9680500782353 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				ED41DCC121F8064D00782353 /* Colors.swift */,
 				ED41DCC321F8069900782353 /* UIColor+extension.swift */,
 				ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */,
+				ED41DCC821F9680500782353 /* UIView+extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
