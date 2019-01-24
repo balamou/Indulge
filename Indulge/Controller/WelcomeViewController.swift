@@ -31,6 +31,22 @@ class WelcomeViewController: UIViewController {
         
         return btn
     }()
+    
+    
+    class Constraints {
+        
+        static func getLoginGoogleButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
+            
+            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
+            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 294)
+            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 51)
+            let clipBottom = NSLayoutConstraint(btn, .bottomMargin, .equal, view, .bottomMargin, 1.0, -282)
+            
+            return [horizontalCenter, clipBottom, width, height]
+        }
+        
+        
+    }
 
     
     override func viewDidLoad() {
@@ -44,19 +60,10 @@ class WelcomeViewController: UIViewController {
         self.view.addSubview(loginGoogleButton)
         loginGoogleButton.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        let horizontalCenter = NSLayoutConstraint(item: loginGoogleButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
-        
-        let width = NSLayoutConstraint(item: loginGoogleButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: 294)
-        
-        let height = NSLayoutConstraint(item: loginGoogleButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 51)
-        
-        let clipBottom = NSLayoutConstraint(item: loginGoogleButton, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: -282)
-   
-        let contraints = [horizontalCenter, clipBottom, width, height]
-        
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(Constraints.getLoginGoogleButton(loginGoogleButton, view))
     }
+    
+    
 
 
 }

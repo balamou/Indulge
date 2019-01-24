@@ -6,7 +6,6 @@
 //  Copyright © 2019 Michel Balamou. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIColor {

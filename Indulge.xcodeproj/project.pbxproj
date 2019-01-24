@@ -15,6 +15,7 @@
 		ED41DCB121F8040100782353 /* IndulgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCB021F8040100782353 /* IndulgeUITests.swift */; };
 		ED41DCC221F8064D00782353 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC121F8064D00782353 /* Colors.swift */; };
 		ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC321F8069900782353 /* UIColor+extension.swift */; };
+		ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ED41DCB221F8040100782353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED41DCC121F8064D00782353 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ED41DCC321F8069900782353 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				ED41DC9721F8040100782353 /* Assets.xcassets */,
 				ED41DCC121F8064D00782353 /* Colors.swift */,
 				ED41DCC321F8069900782353 /* UIColor+extension.swift */,
+				ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
+				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
