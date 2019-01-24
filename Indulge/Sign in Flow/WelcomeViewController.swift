@@ -92,7 +92,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.isNavigationBarHidden = true
         
         view.layer.addSublayer(Colors.backround(self.view.bounds))
         
@@ -108,7 +108,25 @@ class WelcomeViewController: UIViewController {
         view.addSubviewLayout(loginGoogleButton)
         NSLayoutConstraint.activate(Constraints.getLoginGoogleButton(loginGoogleButton, loginFacebookButton))
         
+        
+        createAccountButton.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    @objc func createAccountTapped(){
+        let phoneNumberViewController = PhoneNumberViewController()
+        navigationController?.pushViewController(phoneNumberViewController, animated: true)
+    }
+    
+    
+    
     
     
 

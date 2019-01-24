@@ -17,6 +17,8 @@
 		ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC321F8069900782353 /* UIColor+extension.swift */; };
 		ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */; };
 		ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC821F9680500782353 /* UIView+extension.swift */; };
+		ED41DCCC21F96D7200782353 /* SignInNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCB21F96D7200782353 /* SignInNavigationController.swift */; };
+		ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		ED41DCC321F8069900782353 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+extension.swift"; sourceTree = "<group>"; };
 		ED41DCC821F9680500782353 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		ED41DCCB21F96D7200782353 /* SignInNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigationController.swift; sourceTree = "<group>"; };
+		ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +165,9 @@
 		ED41DCCA21F96CE300782353 /* Sign in Flow */ = {
 			isa = PBXGroup;
 			children = (
+				ED41DCCB21F96D7200782353 /* SignInNavigationController.swift */,
 				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
+				ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */,
 			);
 			path = "Sign in Flow";
 			sourceTree = "<group>";
@@ -296,9 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED41DCCC21F96D7200782353 /* SignInNavigationController.swift in Sources */,
 				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
+				ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,
