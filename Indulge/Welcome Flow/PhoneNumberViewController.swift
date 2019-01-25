@@ -20,19 +20,20 @@ class PhoneNumberViewController: UIViewController {
         phoneNumberView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
-    @objc func nextButtonTapped(){
-        navigationController?.pushViewController(VerificationViewController(), animated: true)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        phoneNumberView!.phoneNumberTextField.becomeFirstResponder()
+        phoneNumberView.phoneNumberTextField.becomeFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        phoneNumberView!.phoneNumberTextField.becomeFirstResponder()
+        phoneNumberView.phoneNumberTextField.becomeFirstResponder()
+    }
+    
+    @objc func nextButtonTapped(){
+        // TODO: 1. Send a msg to user's phone
+        navigationController?.pushViewController(VerificationViewController(), animated: true)
     }
 }

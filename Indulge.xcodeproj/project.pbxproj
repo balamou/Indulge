@@ -23,6 +23,8 @@
 		ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */; };
 		ED41DCD821FAB94600782353 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD721FAB94600782353 /* VerificationView.swift */; };
 		ED41DCDA21FAB9BC00782353 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */; };
+		ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */; };
+		ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDD21FABB0200782353 /* CreateAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		ED41DCD721FAB94600782353 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		ED41DCDD21FABB0200782353 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
 				ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */,
 				ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */,
+				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				ED41DCD321FA882200782353 /* WelcomeView.swift */,
 				ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */,
 				ED41DCD721FAB94600782353 /* VerificationView.swift */,
+				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,10 +333,12 @@
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */,
+				ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */,
 				ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */,
 				ED41DCDA21FAB9BC00782353 /* VerificationViewController.swift in Sources */,
 				ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
+				ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */,
 				ED41DCD821FAB94600782353 /* VerificationView.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,
