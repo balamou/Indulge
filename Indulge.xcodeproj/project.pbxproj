@@ -20,6 +20,7 @@
 		ED41DCCC21F96D7200782353 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCB21F96D7200782353 /* WelcomeNavigationController.swift */; };
 		ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */; };
 		ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD321FA882200782353 /* WelcomeView.swift */; };
+		ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ED41DCCB21F96D7200782353 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
 		ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		ED41DCD321FA882200782353 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				ED41DCD321FA882200782353 /* WelcomeView.swift */,
+				ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */,
 				ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */,
+				ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,

@@ -35,12 +35,5 @@ class WelcomeViewController: UIViewController {
         let phoneNumberViewController = PhoneNumberViewController()
         navigationController?.pushViewController(phoneNumberViewController, animated: true)
     }
-    
-    
-    
-    
-    
-
-
 }
 
