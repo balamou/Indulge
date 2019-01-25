@@ -1,5 +1,5 @@
 //
-//  PhoneNumberViewController.swift
+//  SignInNavigationController.swift
 //  Indulge
 //
 //  Created by Michel Balamou on 2019-01-23.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class PhoneNumberViewController: UIViewController {
-    
+class WelcomeNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.blue
+        
     }
 }

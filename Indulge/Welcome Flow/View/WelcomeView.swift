@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  WelcomeView.swift
 //  Indulge
 //
-//  Created by Michel Balamou on 2019-01-22.
+//  Created by Michel Balamou on 2019-01-24.
 //  Copyright © 2019 Michel Balamou. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeView: UIView {
     
     lazy var loginGoogleButton: UIButton = {
         let btn = UIButton()
@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
         
         return btn
     }()
- 
+    
     lazy var loginButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login", for: .normal)
@@ -87,49 +87,27 @@ class WelcomeViewController: UIViewController {
         }
         
     }
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        self.navigationController?.isNavigationBarHidden = true
+        self.layer.addSublayer(Colors.backround(self.bounds))
         
-        view.layer.addSublayer(Colors.backround(self.view.bounds))
+        self.addSubviewLayout(createAccountButton)
+        self.addSubviewLayout(loginButton)
+        self.addSubviewLayout(loginFacebookButton)
+        self.addSubviewLayout(loginGoogleButton)
         
-        view.addSubviewLayout(createAccountButton)
-        NSLayoutConstraint.activate(Constraints.getCreateAccountButton(createAccountButton, view))
-        
-        view.addSubviewLayout(loginButton)
+        NSLayoutConstraint.activate(Constraints.getCreateAccountButton(createAccountButton, self))
         NSLayoutConstraint.activate(Constraints.getLoginButton(loginButton, createAccountButton))
-        
-        view.addSubviewLayout(loginFacebookButton)
         NSLayoutConstraint.activate(Constraints.getLoginFacebookButton(loginFacebookButton, loginButton))
-        
-        view.addSubviewLayout(loginGoogleButton)
         NSLayoutConstraint.activate(Constraints.getLoginGoogleButton(loginGoogleButton, loginFacebookButton))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
-        
-        createAccountButton.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
+       
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    @objc func createAccountTapped(){
-        let phoneNumberViewController = PhoneNumberViewController()
-        navigationController?.pushViewController(phoneNumberViewController, animated: true)
-    }
-    
-    
-    
-    
-    
-
-
 }
-

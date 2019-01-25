@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // if (userLoggedIn != False) // TODO: Jad
         // {
-        let signInNav = SignInNavigationController()
-        signInNav.viewControllers = [WelcomeViewController()]
+        let welcomeNav = WelcomeNavigationController()
+        welcomeNav.viewControllers = [WelcomeViewController()]
         
-        window!.rootViewController = signInNav
+        window!.rootViewController = welcomeNav
         window!.makeKeyAndVisible()
         // } else {
         
