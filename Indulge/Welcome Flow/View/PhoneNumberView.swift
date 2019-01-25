@@ -10,6 +10,14 @@ import UIKit
 
 class PhoneNumberView: UIView {
     
+    lazy var backButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Back", for: .normal)
+        btn.setTitleColor(UIColor.black, for: .normal)
+       
+        return btn
+    }()
+    
     lazy var phoneNumberTextField: UITextField = {
         let textField = UITextField()
         textField.insertText("+1 (613) XXX XXX")
@@ -26,6 +34,16 @@ class PhoneNumberView: UIView {
     }()
     
     class Constraints {
+        
+        static func getBackButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
+            
+            let horizontalCenter = NSLayoutConstraint(btn, .leading, .equal, view, .leading, 1.0, 16)
+            let clipBottom = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 50)
+            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 100)
+            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 50)
+            
+            return [horizontalCenter, clipBottom, width, height]
+        }
         
         static func getPhoneNumberTextField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
             
@@ -53,9 +71,11 @@ class PhoneNumberView: UIView {
         
         self.layer.addSublayer(Colors.backround(self.bounds))
         
+        self.addSubviewLayout(backButton)
         self.addSubviewLayout(phoneNumberTextField)
         self.addSubviewLayout(nextButton)
         
+        NSLayoutConstraint.activate(Constraints.getBackButton(backButton, self))
         NSLayoutConstraint.activate(Constraints.getPhoneNumberTextField(phoneNumberTextField, self))
         NSLayoutConstraint.activate(Constraints.getNextButton(nextButton, self))
     }

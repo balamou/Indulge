@@ -18,6 +18,7 @@ class PhoneNumberViewController: UIViewController {
         self.view = phoneNumberView
         
         phoneNumberView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        phoneNumberView.backButton.addTarget(self, action: #selector(navigationBarBackButtonTouchUpInside), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,5 +36,9 @@ class PhoneNumberViewController: UIViewController {
     @objc func nextButtonTapped(){
         // TODO: 1. Send a msg to user's phone
         navigationController?.pushViewController(VerificationViewController(), animated: true)
+    }
+    
+    @objc func navigationBarBackButtonTouchUpInside(){
+        navigationController?.popViewController(animated: true)
     }
 }
