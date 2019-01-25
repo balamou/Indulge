@@ -1,5 +1,5 @@
 //
-//  PhoneNumberView.swift
+//  VerificationView.swift
 //  Indulge
 //
 //  Created by Michel Balamou on 2019-01-24.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PhoneNumberView: UIView {
+class VerificationView: UIView {
     
-    lazy var phoneNumberTextField: UITextField = {
+    lazy var codeTextField: UITextField = {
         let textField = UITextField()
-        textField.insertText("+1 (613) XXX XXX")
+        textField.insertText("* * * *")
         
         return textField
     }()
@@ -27,7 +27,7 @@ class PhoneNumberView: UIView {
     
     class Constraints {
         
-        static func getPhoneNumberTextField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
+        static func getCodeTextField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
             
             let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
             let clipBottom = NSLayoutConstraint(textField, .top, .equal, view, .top, 1.0, 187)
@@ -53,10 +53,10 @@ class PhoneNumberView: UIView {
         
         self.layer.addSublayer(Colors.backround(self.bounds))
         
-        self.addSubviewLayout(phoneNumberTextField)
+        self.addSubviewLayout(codeTextField)
         self.addSubviewLayout(nextButton)
         
-        NSLayoutConstraint.activate(Constraints.getPhoneNumberTextField(phoneNumberTextField, self))
+        NSLayoutConstraint.activate(Constraints.getCodeTextField(codeTextField, self))
         NSLayoutConstraint.activate(Constraints.getNextButton(nextButton, self))
     }
     

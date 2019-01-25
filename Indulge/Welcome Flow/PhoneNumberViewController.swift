@@ -16,6 +16,12 @@ class PhoneNumberViewController: UIViewController {
         
         phoneNumberView = PhoneNumberView(frame: self.view.frame)
         self.view = phoneNumberView
+        
+        phoneNumberView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func nextButtonTapped(){
+        navigationController?.pushViewController(VerificationViewController(), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
