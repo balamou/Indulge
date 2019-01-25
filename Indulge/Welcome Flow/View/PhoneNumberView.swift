@@ -8,15 +8,7 @@
 
 import UIKit
 
-class PhoneNumberView: UIView {
-    
-    lazy var backButton: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("Back", for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
-       
-        return btn
-    }()
+class PhoneNumberView: BackButtonView {
     
     lazy var phoneNumberTextField: UITextField = {
         let textField = UITextField()
@@ -69,13 +61,11 @@ class PhoneNumberView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.layer.addSublayer(Colors.backround(self.bounds))
+        self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
-        self.addSubviewLayout(backButton)
         self.addSubviewLayout(phoneNumberTextField)
         self.addSubviewLayout(nextButton)
         
-        NSLayoutConstraint.activate(Constraints.getBackButton(backButton, self))
         NSLayoutConstraint.activate(Constraints.getPhoneNumberTextField(phoneNumberTextField, self))
         NSLayoutConstraint.activate(Constraints.getNextButton(nextButton, self))
     }

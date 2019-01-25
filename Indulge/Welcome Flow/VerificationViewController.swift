@@ -18,6 +18,7 @@ class VerificationViewController: UIViewController {
         self.view = verificationView
         
         verificationView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        verificationView.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,5 +36,9 @@ class VerificationViewController: UIViewController {
     @objc func nextButtonTapped(){
         // TODO: 1. Check if entered passcode is correct
         navigationController?.pushViewController(CreateAccountViewController(), animated: true)
+    }
+    
+    @objc func backButtonTapped(){
+        navigationController?.popViewController(animated: true)
     }
 }

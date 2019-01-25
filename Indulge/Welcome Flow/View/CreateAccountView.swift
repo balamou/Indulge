@@ -8,11 +8,12 @@
 
 import UIKit
 
-class CreateAccountView: UIView {
+class CreateAccountView: BackButtonView {
     
     lazy var createAccountLabel: UILabel = {
         let label = UILabel()
         label.text = "Create An Account"
+        label.textAlignment = .center
         
         return label
     }()
@@ -136,7 +137,7 @@ class CreateAccountView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.layer.addSublayer(Colors.backround(self.bounds))
+        self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
         self.addSubviewLayout(createAccountLabel)
         self.addSubviewLayout(fullNameField)

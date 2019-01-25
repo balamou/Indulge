@@ -18,6 +18,7 @@ class CreateAccountViewController: UIViewController {
         self.view = createAccountView
         
         createAccountView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        createAccountView.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,5 +37,9 @@ class CreateAccountViewController: UIViewController {
         // TODO: 1. check if data in fields is valid
         // TODO: 2. Send request to DB to create a user
         // TODO: 3. if success: open the location's tab
+    }
+    
+    @objc func backButtonTapped(){
+        navigationController?.popViewController(animated: true)
     }
 }

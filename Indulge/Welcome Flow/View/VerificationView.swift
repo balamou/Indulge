@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerificationView: UIView {
+class VerificationView: BackButtonView {
     
     lazy var codeTextField: UITextField = {
         let textField = UITextField()
@@ -51,7 +51,7 @@ class VerificationView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.layer.addSublayer(Colors.backround(self.bounds))
+        self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
         self.addSubviewLayout(codeTextField)
         self.addSubviewLayout(nextButton)

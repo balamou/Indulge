@@ -18,7 +18,7 @@ class PhoneNumberViewController: UIViewController {
         self.view = phoneNumberView
         
         phoneNumberView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        phoneNumberView.backButton.addTarget(self, action: #selector(navigationBarBackButtonTouchUpInside), for: .touchUpInside)
+        phoneNumberView.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +38,7 @@ class PhoneNumberViewController: UIViewController {
         navigationController?.pushViewController(VerificationViewController(), animated: true)
     }
     
-    @objc func navigationBarBackButtonTouchUpInside(){
+    @objc func backButtonTapped(){
         navigationController?.popViewController(animated: true)
     }
 }
