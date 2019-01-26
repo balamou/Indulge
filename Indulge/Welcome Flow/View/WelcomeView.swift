@@ -46,44 +46,32 @@ class WelcomeView: UIView {
     
     class Constraints {
         
-        static func getLoginGoogleButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .bottom, .equal, view, .top, 1.0, -10)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 294)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 51)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setLoginGoogleButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.bottomAnchor.constraint(equalTo: view.topAnchor, constant: -10).isActive = true
+            btn.widthAnchor.constraint(equalToConstant: 294).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 51).isActive = true
         }
         
-        static func getLoginFacebookButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .bottom, .equal, view, .top, 1.0, -115)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 294)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 51)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setLoginFacebookButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.bottomAnchor.constraint(equalTo: view.topAnchor, constant: -115).isActive = true
+            btn.widthAnchor.constraint(equalToConstant: 294).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 51).isActive = true
         }
         
-        static func getLoginButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .bottom, .equal, view, .top, 1.0, -9)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 330)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 57)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setLoginButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.bottomAnchor.constraint(equalTo: view.topAnchor, constant: -9).isActive = true
+            btn.widthAnchor.constraint(equalToConstant: 330).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 57).isActive = true
         }
         
-        static func getCreateAccountButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .bottomMargin, .equal, view, .bottomMargin, 1.0, -14)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 134)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 26)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setCreateAccountButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -14).isActive = true
+            btn.widthAnchor.constraint(equalToConstant: 134).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 26).isActive = true
         }
         
     }
@@ -99,10 +87,10 @@ class WelcomeView: UIView {
         self.addSubviewLayout(loginFacebookButton)
         self.addSubviewLayout(loginGoogleButton)
         
-        NSLayoutConstraint.activate(Constraints.getCreateAccountButton(createAccountButton, self))
-        NSLayoutConstraint.activate(Constraints.getLoginButton(loginButton, createAccountButton))
-        NSLayoutConstraint.activate(Constraints.getLoginFacebookButton(loginFacebookButton, loginButton))
-        NSLayoutConstraint.activate(Constraints.getLoginGoogleButton(loginGoogleButton, loginFacebookButton))
+        Constraints.setCreateAccountButton(createAccountButton, self)
+        Constraints.setLoginButton(loginButton, createAccountButton)
+        Constraints.setLoginFacebookButton(loginFacebookButton, loginButton)
+        Constraints.setLoginGoogleButton(loginGoogleButton, loginFacebookButton)
     }
     
     required init?(coder aDecoder: NSCoder) {

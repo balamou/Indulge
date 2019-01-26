@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // {
         let welcomeNav = WelcomeNavigationController()
         welcomeNav.viewControllers = [WelcomeViewController()]
-        welcomeNav.isNavigationBarHidden = true
         
         window!.rootViewController = welcomeNav
         window!.makeKeyAndVisible()
