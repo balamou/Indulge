@@ -65,7 +65,7 @@ class CreateAccountView: BackButtonView {
         
         static func setCreateAccountLabel(_ textField: UILabel, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+            textField.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
             textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
             textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }

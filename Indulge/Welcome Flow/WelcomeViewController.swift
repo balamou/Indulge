@@ -19,11 +19,16 @@ class WelcomeViewController: UIViewController {
         self.view = welcomeView
         
         welcomeView.createAccountButton.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
+        welcomeView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc func createAccountTapped(){
         let phoneNumberViewController = PhoneNumberViewController()
         navigationController?.pushViewController(phoneNumberViewController, animated: true)
+    }
+    
+    @objc func loginButtonTapped(){
+        navigationController?.pushViewController(LoginViewController(), animated: true)
     }
 }
 

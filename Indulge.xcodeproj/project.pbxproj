@@ -19,6 +19,11 @@
 		ED26553C21FBF86D00523850 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553021FBF86D00523850 /* Brandon_blk.otf */; };
 		ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553121FBF86D00523850 /* Brandon_thin.otf */; };
 		ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553221FBF86D00523850 /* Brandon_thin_it.otf */; };
+		ED26554321FC0BE600523850 /* Cocon-Regular-Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */; };
+		ED26554421FC0BE600523850 /* Cocon-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED26554221FC0BE600523850 /* Cocon-Bold.ttf */; };
+		ED26554621FC0DA800523850 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554521FC0DA800523850 /* LoginView.swift */; };
+		ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554721FC0DB300523850 /* LoginViewController.swift */; };
+		ED26554A21FC14BA00523850 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554921FC14BA00523850 /* Images.swift */; };
 		ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9021F8040000782353 /* AppDelegate.swift */; };
 		ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9221F8040000782353 /* WelcomeViewController.swift */; };
 		ED41DC9821F8040100782353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41DC9721F8040100782353 /* Assets.xcassets */; };
@@ -72,6 +77,11 @@
 		ED26553021FBF86D00523850 /* Brandon_blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk.otf; sourceTree = "<group>"; };
 		ED26553121FBF86D00523850 /* Brandon_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin.otf; sourceTree = "<group>"; };
 		ED26553221FBF86D00523850 /* Brandon_thin_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin_it.otf; sourceTree = "<group>"; };
+		ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocon-Regular-Font.otf"; sourceTree = SOURCE_ROOT; };
+		ED26554221FC0BE600523850 /* Cocon-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocon-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		ED26554521FC0DA800523850 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ED26554721FC0DB300523850 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED26554921FC14BA00523850 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		ED41DC8D21F8040000782353 /* Indulge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indulge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED41DC9021F8040000782353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED41DC9221F8040000782353 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +139,15 @@
 		ED26552621FBF83B00523850 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ED26553F21FC0BC600523850 /* BrandonGrotesque */,
+				ED26554021FC0BD100523850 /* CoconPro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ED26553F21FC0BC600523850 /* BrandonGrotesque */ = {
+			isa = PBXGroup;
+			children = (
 				ED26552921FBF86C00523850 /* Brandon_bld_it.otf */,
 				ED26552A21FBF86C00523850 /* Brandon_bld.otf */,
 				ED26552E21FBF86D00523850 /* Brandon_blk_it.otf */,
@@ -142,7 +161,16 @@
 				ED26553221FBF86D00523850 /* Brandon_thin_it.otf */,
 				ED26553121FBF86D00523850 /* Brandon_thin.otf */,
 			);
-			path = Fonts;
+			path = BrandonGrotesque;
+			sourceTree = "<group>";
+		};
+		ED26554021FC0BD100523850 /* CoconPro */ = {
+			isa = PBXGroup;
+			children = (
+				ED26554221FC0BE600523850 /* Cocon-Bold.ttf */,
+				ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */,
+			);
+			path = CoconPro;
 			sourceTree = "<group>";
 		};
 		ED41DC8421F8040000782353 = {
@@ -169,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				ED41DC9C21F8040100782353 /* Info.plist */,
-				ED41DCCF21FA787000782353 /* Singletons */,
 				ED41DCC521F80B8800782353 /* Resources */,
+				ED41DCCF21FA787000782353 /* Singletons */,
 				ED41DCCA21F96CE300782353 /* Welcome Flow */,
 				ED41DCC021F8047200782353 /* Supporting files */,
 			);
@@ -208,6 +236,7 @@
 			children = (
 				ED26552621FBF83B00523850 /* Fonts */,
 				ED41DC9721F8040100782353 /* Assets.xcassets */,
+				ED26554921FC14BA00523850 /* Images.swift */,
 				ED41DCC121F8064D00782353 /* Colors.swift */,
 				ED41DCC321F8069900782353 /* UIColor+extension.swift */,
 				ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */,
@@ -227,6 +256,7 @@
 				ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */,
 				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
 				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
+				ED26554721FC0DB300523850 /* LoginViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -247,6 +277,7 @@
 				ED41DCD721FAB94600782353 /* VerificationView.swift */,
 				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
 				ED41DCE221FB469D00782353 /* LocationView.swift */,
+				ED26554521FC0DA800523850 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,9 +400,11 @@
 				ED26553821FBF86D00523850 /* Brandon_light_it.otf in Resources */,
 				ED26553B21FBF86D00523850 /* Brandon_light.otf in Resources */,
 				ED41DC9821F8040100782353 /* Assets.xcassets in Resources */,
+				ED26554321FC0BE600523850 /* Cocon-Regular-Font.otf in Resources */,
 				ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */,
 				ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */,
 				ED26553921FBF86D00523850 /* Brandon_med_it.otf in Resources */,
+				ED26554421FC0BE600523850 /* Cocon-Bold.ttf in Resources */,
 				ED26553A21FBF86D00523850 /* Brandon_blk_it.otf in Resources */,
 				ED26553421FBF86D00523850 /* Brandon_reg_it.otf in Resources */,
 				ED26553321FBF86D00523850 /* Brandon_med.otf in Resources */,
@@ -405,6 +438,7 @@
 				ED41DCE321FB469D00782353 /* LocationView.swift in Sources */,
 				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
+				ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */,
 				ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */,
@@ -413,9 +447,11 @@
 				ED41DCDA21FAB9BC00782353 /* VerificationViewController.swift in Sources */,
 				ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
+				ED26554621FC0DA800523850 /* LoginView.swift in Sources */,
 				ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */,
 				ED41DCE121FB3F3F00782353 /* BackButtonView.swift in Sources */,
 				ED41DCD821FAB94600782353 /* VerificationView.swift in Sources */,
+				ED26554A21FC14BA00523850 /* Images.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,
 			);

@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // }
         
+        // let names = UIFont.fontNames(forFamilyName: "Brandon Grotesque")
+        // print("Font names: \(names)")
+        
         return true
     }
 
