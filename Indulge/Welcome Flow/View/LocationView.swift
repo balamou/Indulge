@@ -23,6 +23,8 @@ class LocationView: UIView {
     lazy var asapBarView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
+        
+        addShadow(view)
     
         return view
     }()
@@ -57,12 +59,16 @@ class LocationView: UIView {
         let view = UIView()
         view.backgroundColor = UIColor.white
         
+        addShadow(view)
+        
         return view
     }()
     
     lazy var newAddressBarView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
+        
+        addShadow(view)
         
         return view
     }()
@@ -74,6 +80,13 @@ class LocationView: UIView {
         
         return btn
     }()
+    
+    func addShadow(_ view: UIView) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOpacity = 0.05
+        view.layer.shadowRadius = 6.0
+    }
     
     class Constraints {
         
