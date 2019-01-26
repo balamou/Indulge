@@ -10,6 +10,22 @@ import UIKit
 
 class WelcomeView: UIView {
     
+    lazy var indulgeLabel: UILabel = {
+        var label = UILabel()
+        label.text = "INDULGE"
+        label.textAlignment = .center
+        
+        return label
+    }()
+    
+    lazy var sloganLabel: UILabel = {
+        var label = UILabel()
+        label.text = "#TREAT YOURSELF"
+        label.textAlignment = .center
+        
+        return label
+    }()
+    
     lazy var loginGoogleButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login with Google", for: .normal)
@@ -45,6 +61,21 @@ class WelcomeView: UIView {
     
     
     class Constraints {
+        
+        static func setIndulgeLabel(_ label: UILabel, _ view: UIView) {
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 146).isActive = true
+            label.widthAnchor.constraint(equalToConstant: 224).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 69).isActive = true
+        }
+        
+        static func setSloganLabel(_ label: UILabel, _ view: UIView) {
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            label.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -8).isActive = true
+            label.widthAnchor.constraint(equalToConstant: 220).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        }
+        
         
         static func setLoginGoogleButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -82,11 +113,15 @@ class WelcomeView: UIView {
         
         self.layer.addSublayer(Colors.backround(self.bounds))
         
+        self.addSubviewLayout(indulgeLabel)
+        self.addSubviewLayout(sloganLabel)
         self.addSubviewLayout(createAccountButton)
         self.addSubviewLayout(loginButton)
         self.addSubviewLayout(loginFacebookButton)
         self.addSubviewLayout(loginGoogleButton)
         
+        Constraints.setIndulgeLabel(indulgeLabel, self)
+        Constraints.setSloganLabel(sloganLabel, indulgeLabel)
         Constraints.setCreateAccountButton(createAccountButton, self)
         Constraints.setLoginButton(loginButton, createAccountButton)
         Constraints.setLoginFacebookButton(loginFacebookButton, loginButton)

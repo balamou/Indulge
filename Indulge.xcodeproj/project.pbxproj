@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED26553321FBF86D00523850 /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552721FBF86C00523850 /* Brandon_med.otf */; };
+		ED26553421FBF86D00523850 /* Brandon_reg_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552821FBF86C00523850 /* Brandon_reg_it.otf */; };
+		ED26553521FBF86D00523850 /* Brandon_bld_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552921FBF86C00523850 /* Brandon_bld_it.otf */; };
+		ED26553621FBF86D00523850 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552A21FBF86C00523850 /* Brandon_bld.otf */; };
+		ED26553721FBF86D00523850 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552B21FBF86C00523850 /* Brandon_reg.otf */; };
+		ED26553821FBF86D00523850 /* Brandon_light_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552C21FBF86C00523850 /* Brandon_light_it.otf */; };
+		ED26553921FBF86D00523850 /* Brandon_med_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552D21FBF86D00523850 /* Brandon_med_it.otf */; };
+		ED26553A21FBF86D00523850 /* Brandon_blk_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552E21FBF86D00523850 /* Brandon_blk_it.otf */; };
+		ED26553B21FBF86D00523850 /* Brandon_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26552F21FBF86D00523850 /* Brandon_light.otf */; };
+		ED26553C21FBF86D00523850 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553021FBF86D00523850 /* Brandon_blk.otf */; };
+		ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553121FBF86D00523850 /* Brandon_thin.otf */; };
+		ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553221FBF86D00523850 /* Brandon_thin_it.otf */; };
 		ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9021F8040000782353 /* AppDelegate.swift */; };
 		ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9221F8040000782353 /* WelcomeViewController.swift */; };
 		ED41DC9821F8040100782353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41DC9721F8040100782353 /* Assets.xcassets */; };
@@ -48,6 +60,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED26552721FBF86C00523850 /* Brandon_med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med.otf; sourceTree = "<group>"; };
+		ED26552821FBF86C00523850 /* Brandon_reg_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg_it.otf; sourceTree = "<group>"; };
+		ED26552921FBF86C00523850 /* Brandon_bld_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld_it.otf; sourceTree = "<group>"; };
+		ED26552A21FBF86C00523850 /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
+		ED26552B21FBF86C00523850 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
+		ED26552C21FBF86C00523850 /* Brandon_light_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light_it.otf; sourceTree = "<group>"; };
+		ED26552D21FBF86D00523850 /* Brandon_med_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med_it.otf; sourceTree = "<group>"; };
+		ED26552E21FBF86D00523850 /* Brandon_blk_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk_it.otf; sourceTree = "<group>"; };
+		ED26552F21FBF86D00523850 /* Brandon_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light.otf; sourceTree = "<group>"; };
+		ED26553021FBF86D00523850 /* Brandon_blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk.otf; sourceTree = "<group>"; };
+		ED26553121FBF86D00523850 /* Brandon_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin.otf; sourceTree = "<group>"; };
+		ED26553221FBF86D00523850 /* Brandon_thin_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin_it.otf; sourceTree = "<group>"; };
 		ED41DC8D21F8040000782353 /* Indulge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indulge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED41DC9021F8040000782353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED41DC9221F8040000782353 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +126,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED26552621FBF83B00523850 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED26552921FBF86C00523850 /* Brandon_bld_it.otf */,
+				ED26552A21FBF86C00523850 /* Brandon_bld.otf */,
+				ED26552E21FBF86D00523850 /* Brandon_blk_it.otf */,
+				ED26553021FBF86D00523850 /* Brandon_blk.otf */,
+				ED26552C21FBF86C00523850 /* Brandon_light_it.otf */,
+				ED26552F21FBF86D00523850 /* Brandon_light.otf */,
+				ED26552D21FBF86D00523850 /* Brandon_med_it.otf */,
+				ED26552721FBF86C00523850 /* Brandon_med.otf */,
+				ED26552821FBF86C00523850 /* Brandon_reg_it.otf */,
+				ED26552B21FBF86C00523850 /* Brandon_reg.otf */,
+				ED26553221FBF86D00523850 /* Brandon_thin_it.otf */,
+				ED26553121FBF86D00523850 /* Brandon_thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ED41DC8421F8040000782353 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +206,7 @@
 		ED41DCC521F80B8800782353 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED26552621FBF83B00523850 /* Fonts */,
 				ED41DC9721F8040100782353 /* Assets.xcassets */,
 				ED41DCC121F8064D00782353 /* Colors.swift */,
 				ED41DCC321F8069900782353 /* UIColor+extension.swift */,
@@ -319,8 +363,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED26553721FBF86D00523850 /* Brandon_reg.otf in Resources */,
 				ED41DC9B21F8040100782353 /* LaunchScreen.storyboard in Resources */,
+				ED26553C21FBF86D00523850 /* Brandon_blk.otf in Resources */,
+				ED26553821FBF86D00523850 /* Brandon_light_it.otf in Resources */,
+				ED26553B21FBF86D00523850 /* Brandon_light.otf in Resources */,
 				ED41DC9821F8040100782353 /* Assets.xcassets in Resources */,
+				ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */,
+				ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */,
+				ED26553921FBF86D00523850 /* Brandon_med_it.otf in Resources */,
+				ED26553A21FBF86D00523850 /* Brandon_blk_it.otf in Resources */,
+				ED26553421FBF86D00523850 /* Brandon_reg_it.otf in Resources */,
+				ED26553321FBF86D00523850 /* Brandon_med.otf in Resources */,
+				ED26553521FBF86D00523850 /* Brandon_bld_it.otf in Resources */,
+				ED26553621FBF86D00523850 /* Brandon_bld.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
