@@ -26,6 +26,8 @@
 		ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */; };
 		ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDD21FABB0200782353 /* CreateAccountView.swift */; };
 		ED41DCE121FB3F3F00782353 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCE021FB3F3F00782353 /* BackButtonView.swift */; };
+		ED41DCE321FB469D00782353 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCE221FB469D00782353 /* LocationView.swift */; };
+		ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCE421FB46AD00782353 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		ED41DCDD21FABB0200782353 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		ED41DCE021FB3F3F00782353 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		ED41DCE221FB469D00782353 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		ED41DCE421FB46AD00782353 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 				ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */,
 				ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */,
 				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
+				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */,
 				ED41DCD721FAB94600782353 /* VerificationView.swift */,
 				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
+				ED41DCE221FB469D00782353 /* LocationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED41DCCC21F96D7200782353 /* WelcomeNavigationController.swift in Sources */,
+				ED41DCE321FB469D00782353 /* LocationView.swift in Sources */,
 				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
+				ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */,
 				ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */,

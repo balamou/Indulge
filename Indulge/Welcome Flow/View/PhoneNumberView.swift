@@ -26,17 +26,7 @@ class PhoneNumberView: BackButtonView {
     }()
     
     class Constraints {
-        
-        static func getBackButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .leading, .equal, view, .leading, 1.0, 16)
-            let clipBottom = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 50)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 100)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 50)
-            
-            return [horizontalCenter, clipBottom, width, height]
-        }
-        
+       
         static func getPhoneNumberTextField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
             
             let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
