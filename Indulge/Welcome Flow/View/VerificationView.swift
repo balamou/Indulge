@@ -27,24 +27,18 @@ class VerificationView: BackButtonView {
     
     class Constraints {
         
-        static func getCodeTextField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(textField, .top, .equal, view, .top, 1.0, 187)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 134)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 26)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setCodeTextField(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 187).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 134).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 26).isActive = true
         }
         
-        static func getNextButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 396)
-            let width = NSLayoutConstraint(btn, .width, .equal, view, .width, 1.0, 0)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 55)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setNextButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 396).isActive = true
+            btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
     }
     
@@ -56,8 +50,8 @@ class VerificationView: BackButtonView {
         self.addSubviewLayout(codeTextField)
         self.addSubviewLayout(nextButton)
         
-        NSLayoutConstraint.activate(Constraints.getCodeTextField(codeTextField, self))
-        NSLayoutConstraint.activate(Constraints.getNextButton(nextButton, self))
+        Constraints.setCodeTextField(codeTextField, self)
+        Constraints.setNextButton(nextButton, self)
     }
     
     required init?(coder aDecoder: NSCoder) {
