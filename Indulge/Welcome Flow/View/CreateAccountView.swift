@@ -63,74 +63,53 @@ class CreateAccountView: BackButtonView {
     
     class Constraints {
         
-        static func getCreateAccountLabel(_ textField: UILabel, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .top, 1.0, 40)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setCreateAccountLabel(_ textField: UILabel, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getFullNameField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .bottom, 1.0, 18)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setFullNameField(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 18).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getEmailField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .bottom, 1.0, 10)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setEmailField(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getBirthdayField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .bottom, 1.0, 10)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setBirthdayField(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getPasswordField(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .bottom, 1.0, 38)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setPasswordField(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 38).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getConfirmPassword(_ textField: UITextField, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(textField, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(textField, .top, .equal, view, .bottom, 1.0, 10)
-            let width = NSLayoutConstraint(textField, .width, .equal, nil, .width, 1.0, 194)
-            let height = NSLayoutConstraint(textField, .height, .equal, nil, .height, 1.0, 36)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setConfirmPassword(_ textField: UITextField, _ view: UIView) {
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func getNextButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let yClipping = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 396)
-            let width = NSLayoutConstraint(btn, .width, .equal, view, .width, 1.0, 0)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 55)
-            
-            return [horizontalCenter, yClipping, width, height]
+        static func setNextButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 396).isActive = true
+            btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
     }
     
@@ -147,13 +126,13 @@ class CreateAccountView: BackButtonView {
         self.addSubviewLayout(confirmPasswordField)
         self.addSubviewLayout(nextButton)
         
-        NSLayoutConstraint.activate(Constraints.getCreateAccountLabel(createAccountLabel, self))
-        NSLayoutConstraint.activate(Constraints.getFullNameField(fullNameField, createAccountLabel))
-        NSLayoutConstraint.activate(Constraints.getEmailField(emailField, fullNameField))
-        NSLayoutConstraint.activate(Constraints.getBirthdayField(birthdayField, emailField))
-        NSLayoutConstraint.activate(Constraints.getPasswordField(passwordField, birthdayField))
-        NSLayoutConstraint.activate(Constraints.getConfirmPassword(confirmPasswordField, passwordField))
-        NSLayoutConstraint.activate(Constraints.getNextButton(nextButton, self))
+        Constraints.setCreateAccountLabel(createAccountLabel, self)
+        Constraints.setFullNameField(fullNameField, createAccountLabel)
+        Constraints.setEmailField(emailField, fullNameField)
+        Constraints.setBirthdayField(birthdayField, emailField)
+        Constraints.setPasswordField(passwordField, birthdayField)
+        Constraints.setConfirmPassword(confirmPasswordField, passwordField)
+        Constraints.setNextButton(nextButton, self)
     }
     
     required init?(coder aDecoder: NSCoder) {
