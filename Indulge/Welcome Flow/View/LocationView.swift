@@ -85,7 +85,7 @@ class LocationView: UIView {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowOpacity = 0.05
-        view.layer.shadowRadius = 6.0
+        view.layer.shadowRadius = 5.0
     }
     
     class Constraints {

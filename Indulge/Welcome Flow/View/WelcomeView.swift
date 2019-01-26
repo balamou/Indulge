@@ -154,7 +154,7 @@ class WelcomeView: UIView {
             
             addStyle(loginGoogleButton, #colorLiteral(red: 0.9254901961, green: 0.3529411765, blue: 0.3058823529, alpha: 1))
             addStyle(loginFacebookButton, #colorLiteral(red: 0.2156862745, green: 0.337254902, blue: 0.6235294118, alpha: 1))
-            addStyle(loginButton, UIColor.white)
+            addStyle(loginButton, #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         }
     }
     
