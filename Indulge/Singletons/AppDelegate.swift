@@ -18,14 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        // if (userLoggedIn != False) // TODO: Jad
+        // if (userLoggedIn != False) // TODO: if user not logged in -> Show welcome screen
         // {
         let welcomeNav = WelcomeNavigationController()
         welcomeNav.viewControllers = [WelcomeViewController()]
         
         window!.rootViewController = welcomeNav
         window!.makeKeyAndVisible()
-        // } else {
+        // } else { // TODO: if user logged in -> Show main screen
         
         
         // }

@@ -23,8 +23,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc func createAccountTapped(){
-        let phoneNumberViewController = PhoneNumberViewController()
-        navigationController?.pushViewController(phoneNumberViewController, animated: true)
+        navigationController?.pushViewController(CreateAccountViewController(), animated: true)
     }
     
     @objc func loginButtonTapped(){

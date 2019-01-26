@@ -24,6 +24,8 @@
 		ED26554621FC0DA800523850 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554521FC0DA800523850 /* LoginView.swift */; };
 		ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554721FC0DB300523850 /* LoginViewController.swift */; };
 		ED26554A21FC14BA00523850 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554921FC14BA00523850 /* Images.swift */; };
+		ED26554C21FCBA9800523850 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554B21FCBA9800523850 /* MenuView.swift */; };
+		ED26554E21FCBAC900523850 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26554D21FCBAC900523850 /* MenuViewController.swift */; };
 		ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9021F8040000782353 /* AppDelegate.swift */; };
 		ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9221F8040000782353 /* WelcomeViewController.swift */; };
 		ED41DC9821F8040100782353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41DC9721F8040100782353 /* Assets.xcassets */; };
@@ -35,11 +37,7 @@
 		ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */; };
 		ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCC821F9680500782353 /* UIView+extension.swift */; };
 		ED41DCCC21F96D7200782353 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCB21F96D7200782353 /* WelcomeNavigationController.swift */; };
-		ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */; };
 		ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD321FA882200782353 /* WelcomeView.swift */; };
-		ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */; };
-		ED41DCD821FAB94600782353 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD721FAB94600782353 /* VerificationView.swift */; };
-		ED41DCDA21FAB9BC00782353 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */; };
 		ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */; };
 		ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCDD21FABB0200782353 /* CreateAccountView.swift */; };
 		ED41DCE121FB3F3F00782353 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DCE021FB3F3F00782353 /* BackButtonView.swift */; };
@@ -82,6 +80,8 @@
 		ED26554521FC0DA800523850 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ED26554721FC0DB300523850 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED26554921FC14BA00523850 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		ED26554B21FCBA9800523850 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		ED26554D21FCBAC900523850 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ED41DC8D21F8040000782353 /* Indulge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indulge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED41DC9021F8040000782353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED41DC9221F8040000782353 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -99,11 +99,7 @@
 		ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+extension.swift"; sourceTree = "<group>"; };
 		ED41DCC821F9680500782353 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		ED41DCCB21F96D7200782353 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
-		ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		ED41DCD321FA882200782353 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
-		ED41DCD721FAB94600782353 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
-		ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		ED41DCDD21FABB0200782353 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		ED41DCE021FB3F3F00782353 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -252,11 +248,10 @@
 				ED41DCDF21FB3F2300782353 /* Common */,
 				ED41DCD021FA7F7A00782353 /* View */,
 				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
-				ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */,
-				ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */,
 				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
-				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
 				ED26554721FC0DB300523850 /* LoginViewController.swift */,
+				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
+				ED26554D21FCBAC900523850 /* MenuViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -273,11 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				ED41DCD321FA882200782353 /* WelcomeView.swift */,
-				ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */,
-				ED41DCD721FAB94600782353 /* VerificationView.swift */,
 				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
-				ED41DCE221FB469D00782353 /* LocationView.swift */,
 				ED26554521FC0DA800523850 /* LoginView.swift */,
+				ED41DCE221FB469D00782353 /* LocationView.swift */,
+				ED26554B21FCBA9800523850 /* MenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,16 +435,14 @@
 				ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */,
 				ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
+				ED26554C21FCBA9800523850 /* MenuView.swift in Sources */,
 				ED41DCD421FA882200782353 /* WelcomeView.swift in Sources */,
 				ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */,
-				ED41DCCE21F96ED200782353 /* PhoneNumberViewController.swift in Sources */,
-				ED41DCDA21FAB9BC00782353 /* VerificationViewController.swift in Sources */,
-				ED41DCD621FA9AE300782353 /* PhoneNumberView.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
 				ED26554621FC0DA800523850 /* LoginView.swift in Sources */,
 				ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */,
+				ED26554E21FCBAC900523850 /* MenuViewController.swift in Sources */,
 				ED41DCE121FB3F3F00782353 /* BackButtonView.swift in Sources */,
-				ED41DCD821FAB94600782353 /* VerificationView.swift in Sources */,
 				ED26554A21FC14BA00523850 /* Images.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED41DCC721F964E400782353 /* NSLayoutConstraint+extension.swift in Sources */,
