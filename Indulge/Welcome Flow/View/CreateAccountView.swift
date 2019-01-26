@@ -32,9 +32,9 @@ class CreateAccountView: BackButtonView {
         return textField
     }()
     
-    lazy var birthdayField: UITextField = {
+    lazy var phoneNumberField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Birthday"
+        textField.placeholder = "Phone number"
         
         return textField
     }()
@@ -84,7 +84,7 @@ class CreateAccountView: BackButtonView {
             textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
-        static func setBirthdayField(_ textField: UITextField, _ view: UIView) {
+        static func setPhoneNumberField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
             textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
@@ -121,7 +121,7 @@ class CreateAccountView: BackButtonView {
         self.addSubviewLayout(createAccountLabel)
         self.addSubviewLayout(fullNameField)
         self.addSubviewLayout(emailField)
-        self.addSubviewLayout(birthdayField)
+        self.addSubviewLayout(phoneNumberField)
         self.addSubviewLayout(passwordField)
         self.addSubviewLayout(confirmPasswordField)
         self.addSubviewLayout(nextButton)
@@ -129,8 +129,8 @@ class CreateAccountView: BackButtonView {
         Constraints.setCreateAccountLabel(createAccountLabel, self)
         Constraints.setFullNameField(fullNameField, createAccountLabel)
         Constraints.setEmailField(emailField, fullNameField)
-        Constraints.setBirthdayField(birthdayField, emailField)
-        Constraints.setPasswordField(passwordField, birthdayField)
+        Constraints.setPhoneNumberField(phoneNumberField, emailField)
+        Constraints.setPasswordField(passwordField, phoneNumberField)
         Constraints.setConfirmPassword(confirmPasswordField, passwordField)
         Constraints.setNextButton(nextButton, self)
     }

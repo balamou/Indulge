@@ -37,7 +37,7 @@ class CreateAccountViewController: UIViewController {
         // TODO: 1. check if data in fields is valid
         // TODO: 2. Send request to DB to create a user
         // TODO: 3. if success: open the location's tab
-        navigationController?.pushViewController(PhoneNumberViewController(), animated: true)
+        navigationController?.pushViewController(LocationViewController(), animated: true)
     }
     
     @objc func backButtonTapped(){
