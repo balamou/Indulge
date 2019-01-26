@@ -63,11 +63,11 @@ class CreateAccountView: BackButtonView {
     
     class Constraints {
         
-        static func setCreateAccountLabel(_ textField: UILabel, _ view: UIView) {
-            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            textField.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        static func setCreateAccountLabel(_ label: UILabel, _ view: UIView) {
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            label.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
+            label.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
         
         static func setFullNameField(_ textField: UITextField, _ view: UIView) {

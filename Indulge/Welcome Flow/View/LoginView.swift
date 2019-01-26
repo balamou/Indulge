@@ -10,9 +10,19 @@ import UIKit
 
 class LoginView: BackButtonView {
     
+    lazy var loginLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Login"
+        label.textAlignment = .center
+        label.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
+        
+        return label
+    }()
+    
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Email"
+        textField.font = UIFont(name: "BrandonGrotesque-Light", size: 18)
         
         return textField
     }()
@@ -20,6 +30,7 @@ class LoginView: BackButtonView {
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
+        textField.font = UIFont(name: "BrandonGrotesque-Light", size: 18)
         
         return textField
     }()
@@ -33,6 +44,13 @@ class LoginView: BackButtonView {
     }()
     
     class Constraints {
+        
+        static func setLoginLabel(_ label: UILabel, _ view: UIView) {
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            label.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
+            label.widthAnchor.constraint(equalToConstant: 194).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        }
         
         static func setEmailTextField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -61,10 +79,12 @@ class LoginView: BackButtonView {
         
         self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
+        self.addSubviewLayout(loginLabel)
         self.addSubviewLayout(emailTextField)
         self.addSubviewLayout(passwordTextField)
         self.addSubviewLayout(continueButton)
         
+        Constraints.setLoginLabel(loginLabel, self)
         Constraints.setEmailTextField(emailTextField, self)
         Constraints.setPasswordTextField(passwordTextField, emailTextField)
         Constraints.setContinueButton(continueButton, self)
