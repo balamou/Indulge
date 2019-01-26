@@ -11,4 +11,5 @@ import UIKit
 class Images {
     
     static let backButtonImage: UIImage = #imageLiteral(resourceName: "back_icon")
+    static let canadianFlagImage: UIImage = #imageLiteral(resourceName: "canadian_flag")
 }
