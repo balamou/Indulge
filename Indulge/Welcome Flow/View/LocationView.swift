@@ -20,14 +20,11 @@ class LocationView: UIView {
     
     class Constraints {
         
-        static func getDoneButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .centerX, .equal, view, .centerX, 1.0, 0)
-            let clipBottom = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 396)
-            let width = NSLayoutConstraint(btn, .width, .equal, view, .width, 1.0, 0)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 55)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setDoneButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 396).isActive = true
+            btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
     }
     
@@ -38,7 +35,7 @@ class LocationView: UIView {
         
         self.addSubviewLayout(doneButton)
         
-        NSLayoutConstraint.activate(Constraints.getDoneButton(doneButton, self))
+        Constraints.setDoneButton(doneButton, self)
     }
     
     required init?(coder aDecoder: NSCoder) {
