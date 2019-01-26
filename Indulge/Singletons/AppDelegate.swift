@@ -32,11 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // let names = UIFont.fontNames(forFamilyName: "Brandon Grotesque")
         // print("Font names: \(names)")
-    
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
+        
         return true
     }
 

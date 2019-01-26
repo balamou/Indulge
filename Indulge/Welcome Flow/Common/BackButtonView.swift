@@ -12,22 +12,18 @@ class BackButtonView: UIView {
     
     lazy var backButton: UIButton = {
         let btn = UIButton()
-        btn.setTitle("Back", for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
+        btn.setImage(Images.backButtonImage, for: .normal)
         
         return btn
     }()
     
     class Constraints {
         
-        static func getBackButton(_ btn: UIButton, _ view: UIView) -> [NSLayoutConstraint] {
-            
-            let horizontalCenter = NSLayoutConstraint(btn, .leading, .equal, view, .leading, 1.0, 16)
-            let clipBottom = NSLayoutConstraint(btn, .top, .equal, view, .top, 1.0, 50)
-            let width = NSLayoutConstraint(btn, .width, .equal, nil, .width, 1.0, 100)
-            let height = NSLayoutConstraint(btn, .height, .equal, nil, .height, 1.0, 50)
-            
-            return [horizontalCenter, clipBottom, width, height]
+        static func setBackButton(_ btn: UIButton, _ view: UIView) {
+            btn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+            btn.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
+            btn.widthAnchor.constraint(equalToConstant: 30).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 30).isActive = true
         }
         
     }
@@ -37,7 +33,7 @@ class BackButtonView: UIView {
         
         self.addSubviewLayout(backButton)
         
-        NSLayoutConstraint.activate(Constraints.getBackButton(backButton, self))
+        Constraints.setBackButton(backButton, self)
     }
     
     required init?(coder aDecoder: NSCoder) {
