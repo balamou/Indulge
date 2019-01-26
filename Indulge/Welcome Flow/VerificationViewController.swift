@@ -35,7 +35,8 @@ class VerificationViewController: UIViewController {
     
     @objc func nextButtonTapped(){
         // TODO: 1. Check if entered passcode is correct
-        navigationController?.pushViewController(CreateAccountViewController(), animated: true)
+        // TODO: 2. Open location view controller
+        navigationController?.pushViewController(LocationViewController(), animated: true)
     }
     
     @objc func backButtonTapped(){

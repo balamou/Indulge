@@ -252,11 +252,11 @@
 				ED41DCDF21FB3F2300782353 /* Common */,
 				ED41DCD021FA7F7A00782353 /* View */,
 				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
+				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
+				ED26554721FC0DB300523850 /* LoginViewController.swift */,
 				ED41DCCD21F96ED200782353 /* PhoneNumberViewController.swift */,
 				ED41DCD921FAB9BC00782353 /* VerificationViewController.swift */,
-				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
 				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
-				ED26554721FC0DB300523850 /* LoginViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -273,11 +273,11 @@
 			isa = PBXGroup;
 			children = (
 				ED41DCD321FA882200782353 /* WelcomeView.swift */,
+				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
+				ED26554521FC0DA800523850 /* LoginView.swift */,
 				ED41DCD521FA9AE300782353 /* PhoneNumberView.swift */,
 				ED41DCD721FAB94600782353 /* VerificationView.swift */,
-				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
 				ED41DCE221FB469D00782353 /* LocationView.swift */,
-				ED26554521FC0DA800523850 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
