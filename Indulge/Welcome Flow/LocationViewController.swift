@@ -22,7 +22,7 @@ class LocationViewController: UIViewController {
     
     @objc func doneButtonTapped() {
         // TODO: 1. Check if location selected
-        // 2. Open Selection View Controller
+        // TODO: 2. Open Menu View Controller
         navigationController?.pushViewController(MenuViewController(), animated: true)
     }
     

@@ -169,6 +169,23 @@
 			path = CoconPro;
 			sourceTree = "<group>";
 		};
+		ED26554F21FCC00D00523850 /* Main Flow */ = {
+			isa = PBXGroup;
+			children = (
+				ED26555021FCC02600523850 /* View */,
+				ED26554D21FCBAC900523850 /* MenuViewController.swift */,
+			);
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		ED26555021FCC02600523850 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED26554B21FCBA9800523850 /* MenuView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ED41DC8421F8040000782353 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 				ED41DCC521F80B8800782353 /* Resources */,
 				ED41DCCF21FA787000782353 /* Singletons */,
 				ED41DCCA21F96CE300782353 /* Welcome Flow */,
+				ED26554F21FCC00D00523850 /* Main Flow */,
 				ED41DCC021F8047200782353 /* Supporting files */,
 			);
 			path = Indulge;
@@ -251,7 +269,6 @@
 				ED41DCDB21FABAE100782353 /* CreateAccountViewController.swift */,
 				ED26554721FC0DB300523850 /* LoginViewController.swift */,
 				ED41DCE421FB46AD00782353 /* LocationViewController.swift */,
-				ED26554D21FCBAC900523850 /* MenuViewController.swift */,
 			);
 			path = "Welcome Flow";
 			sourceTree = "<group>";
@@ -271,7 +288,6 @@
 				ED41DCDD21FABB0200782353 /* CreateAccountView.swift */,
 				ED26554521FC0DA800523850 /* LoginView.swift */,
 				ED41DCE221FB469D00782353 /* LocationView.swift */,
-				ED26554B21FCBA9800523850 /* MenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

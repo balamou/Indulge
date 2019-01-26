@@ -13,8 +13,9 @@ class MenuView: UIView {
     lazy var locationButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("75 Laurier Ave", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
+        btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
+        btn.titleLabel?.textAlignment = .center
         
         return btn
     }()
@@ -23,8 +24,9 @@ class MenuView: UIView {
         
         static func setLocationButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            btn.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
-            btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            btn.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20).isActive = true
+            btn.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            btn.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
     }
