@@ -19,6 +19,8 @@
 		ED26553C21FBF86D00523850 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553021FBF86D00523850 /* Brandon_blk.otf */; };
 		ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553121FBF86D00523850 /* Brandon_thin.otf */; };
 		ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26553221FBF86D00523850 /* Brandon_thin_it.otf */; };
+		ED26554321FC0BE600523850 /* Cocon-Regular-Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */; };
+		ED26554421FC0BE600523850 /* Cocon-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED26554221FC0BE600523850 /* Cocon-Bold.ttf */; };
 		ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9021F8040000782353 /* AppDelegate.swift */; };
 		ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41DC9221F8040000782353 /* WelcomeViewController.swift */; };
 		ED41DC9821F8040100782353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41DC9721F8040100782353 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		ED26553021FBF86D00523850 /* Brandon_blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk.otf; sourceTree = "<group>"; };
 		ED26553121FBF86D00523850 /* Brandon_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin.otf; sourceTree = "<group>"; };
 		ED26553221FBF86D00523850 /* Brandon_thin_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin_it.otf; sourceTree = "<group>"; };
+		ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocon-Regular-Font.otf"; sourceTree = SOURCE_ROOT; };
+		ED26554221FC0BE600523850 /* Cocon-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocon-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		ED41DC8D21F8040000782353 /* Indulge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indulge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED41DC9021F8040000782353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED41DC9221F8040000782353 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 		ED26552621FBF83B00523850 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ED26553F21FC0BC600523850 /* BrandonGrotesque */,
+				ED26554021FC0BD100523850 /* CoconPro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ED26553F21FC0BC600523850 /* BrandonGrotesque */ = {
+			isa = PBXGroup;
+			children = (
 				ED26552921FBF86C00523850 /* Brandon_bld_it.otf */,
 				ED26552A21FBF86C00523850 /* Brandon_bld.otf */,
 				ED26552E21FBF86D00523850 /* Brandon_blk_it.otf */,
@@ -142,7 +155,16 @@
 				ED26553221FBF86D00523850 /* Brandon_thin_it.otf */,
 				ED26553121FBF86D00523850 /* Brandon_thin.otf */,
 			);
-			path = Fonts;
+			path = BrandonGrotesque;
+			sourceTree = "<group>";
+		};
+		ED26554021FC0BD100523850 /* CoconPro */ = {
+			isa = PBXGroup;
+			children = (
+				ED26554221FC0BE600523850 /* Cocon-Bold.ttf */,
+				ED26554121FC0BE600523850 /* Cocon-Regular-Font.otf */,
+			);
+			path = CoconPro;
 			sourceTree = "<group>";
 		};
 		ED41DC8421F8040000782353 = {
@@ -169,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				ED41DC9C21F8040100782353 /* Info.plist */,
-				ED41DCCF21FA787000782353 /* Singletons */,
 				ED41DCC521F80B8800782353 /* Resources */,
+				ED41DCCF21FA787000782353 /* Singletons */,
 				ED41DCCA21F96CE300782353 /* Welcome Flow */,
 				ED41DCC021F8047200782353 /* Supporting files */,
 			);
@@ -369,9 +391,11 @@
 				ED26553821FBF86D00523850 /* Brandon_light_it.otf in Resources */,
 				ED26553B21FBF86D00523850 /* Brandon_light.otf in Resources */,
 				ED41DC9821F8040100782353 /* Assets.xcassets in Resources */,
+				ED26554321FC0BE600523850 /* Cocon-Regular-Font.otf in Resources */,
 				ED26553E21FBF86D00523850 /* Brandon_thin_it.otf in Resources */,
 				ED26553D21FBF86D00523850 /* Brandon_thin.otf in Resources */,
 				ED26553921FBF86D00523850 /* Brandon_med_it.otf in Resources */,
+				ED26554421FC0BE600523850 /* Cocon-Bold.ttf in Resources */,
 				ED26553A21FBF86D00523850 /* Brandon_blk_it.otf in Resources */,
 				ED26553421FBF86D00523850 /* Brandon_reg_it.otf in Resources */,
 				ED26553321FBF86D00523850 /* Brandon_med.otf in Resources */,

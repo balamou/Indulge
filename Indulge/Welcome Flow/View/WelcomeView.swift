@@ -14,6 +14,7 @@ class WelcomeView: UIView {
         var label = UILabel()
         label.text = "INDULGE"
         label.textAlignment = .center
+        label.font = UIFont(name: "Cocon-Bold", size: 50.0)
         
         return label
     }()
@@ -22,6 +23,7 @@ class WelcomeView: UIView {
         var label = UILabel()
         label.text = "#TREAT YOURSELF"
         label.textAlignment = .center
+        label.font = UIFont(name: "BrandonGrotesque-Light", size: 25.0)
         
         return label
     }()
@@ -30,6 +32,7 @@ class WelcomeView: UIView {
         let btn = UIButton()
         btn.setTitle("Login with Google", for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3529411765, blue: 0.3058823529, alpha: 1)
+        btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
         return btn
     }()
@@ -38,6 +41,7 @@ class WelcomeView: UIView {
         let btn = UIButton()
         btn.setTitle("Login with Facebook", for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.2156862745, green: 0.337254902, blue: 0.6235294118, alpha: 1)
+        btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
         return btn
     }()
@@ -47,6 +51,7 @@ class WelcomeView: UIView {
         btn.setTitle("Login", for: .normal)
         btn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         btn.setTitleColor(UIColor.black, for: .normal)
+        btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
         return btn
     }()
@@ -55,6 +60,7 @@ class WelcomeView: UIView {
         let btn = UIButton()
         btn.setTitle("Create an Account", for: .normal)
         btn.setTitleColor(#colorLiteral(red: 0.368627451, green: 0.3843137255, blue: 0.462745098, alpha: 1), for: .normal)
+        btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 18.0)
         
         return btn
     }()
