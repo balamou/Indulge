@@ -141,7 +141,7 @@ class LocationView: UIView {
         
         static func setDoneButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 396).isActive = true
+            //btn.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
