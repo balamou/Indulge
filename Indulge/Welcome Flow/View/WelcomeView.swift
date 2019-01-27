@@ -10,6 +10,8 @@ import UIKit
 
 class WelcomeView: UIView {
     
+    var didLayoutAlready = false
+    
     lazy var indulgeLabel: UILabel = {
         var label = UILabel()
         label.text = "INDULGE"
@@ -31,7 +33,6 @@ class WelcomeView: UIView {
     lazy var loginGoogleButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login with Google", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3529411765, blue: 0.3058823529, alpha: 1)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
         return btn
@@ -40,7 +41,6 @@ class WelcomeView: UIView {
     lazy var loginFacebookButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login with Facebook", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.2156862745, green: 0.337254902, blue: 0.6235294118, alpha: 1)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
         return btn
@@ -49,7 +49,7 @@ class WelcomeView: UIView {
     lazy var loginButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //btn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
@@ -65,6 +65,20 @@ class WelcomeView: UIView {
         return btn
     }()
     
+    
+    func addStyle(_ btn: UIButton, _ color: UIColor){
+        let shadowLayer = CAShapeLayer()
+        shadowLayer.path = UIBezierPath(roundedRect: btn.bounds, cornerRadius: 25.0).cgPath
+        shadowLayer.fillColor = color.cgColor
+        
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        shadowLayer.shadowOpacity = 0.08
+        shadowLayer.shadowRadius = 6
+        
+        btn.layer.insertSublayer(shadowLayer, at: 0)
+    }
     
     class Constraints {
         
@@ -132,6 +146,16 @@ class WelcomeView: UIView {
         Constraints.setLoginButton(loginButton, createAccountButton)
         Constraints.setLoginFacebookButton(loginFacebookButton, loginButton)
         Constraints.setLoginGoogleButton(loginGoogleButton, loginFacebookButton)
+    }
+    
+    func viewDidLayoutSubviews() {
+        if (!didLayoutAlready) {
+            didLayoutAlready = true
+            
+            addStyle(loginGoogleButton, #colorLiteral(red: 0.9254901961, green: 0.3529411765, blue: 0.3058823529, alpha: 1))
+            addStyle(loginFacebookButton, #colorLiteral(red: 0.2156862745, green: 0.337254902, blue: 0.6235294118, alpha: 1))
+            addStyle(loginButton, #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

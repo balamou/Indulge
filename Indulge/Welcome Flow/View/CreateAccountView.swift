@@ -12,8 +12,9 @@ class CreateAccountView: BackButtonView {
     
     lazy var createAccountLabel: UILabel = {
         let label = UILabel()
-        label.text = "Create An Account"
+        label.text = "Create an Account"
         label.textAlignment = .center
+        label.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
         
         return label
     }()

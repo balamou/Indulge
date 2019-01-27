@@ -22,6 +22,10 @@ class WelcomeViewController: UIViewController {
         welcomeView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
+    override func viewDidLayoutSubviews() {
+        welcomeView.viewDidLayoutSubviews()
+    }
+    
     @objc func createAccountTapped(){
         navigationController?.pushViewController(CreateAccountViewController(), animated: true)
     }
