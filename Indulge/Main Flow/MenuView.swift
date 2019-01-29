@@ -36,7 +36,7 @@ class MenuView: UIView {
         
         static func setLocationButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            btn.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20).isActive = true
+            btn.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 10).isActive = true
             btn.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
             btn.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true

@@ -9,7 +9,9 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
+   
     var createAccountView: CreateAccountView!
+    weak var delegate: CreateAccountDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +39,10 @@ class CreateAccountViewController: UIViewController {
         // TODO: 1. check if data in fields is valid
         // TODO: 2. Send request to DB to create a user
         // TODO: 3. if success: open the location's tab
-        navigationController?.pushViewController(LocationViewController(), animated: true)
+        delegate?.showLocation(self)
     }
     
     @objc func backButtonTapped(){
-        navigationController?.popViewController(animated: true)
+        delegate?.backButtonTapped(self)
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     var welcomeView: WelcomeView!
+    weak var delegate: WelcomeDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,11 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc func createAccountTapped(){
-        navigationController?.pushViewController(CreateAccountViewController(), animated: true)
+        delegate?.showCreateAccount(self)
     }
     
     @objc func loginButtonTapped(){
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+        delegate?.showLogin(self)
     }
 }
 

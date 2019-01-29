@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
     var menuView: MenuView!
+    weak var delegate: MenuDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class MenuViewController: UIViewController {
     }
     
     @objc func locationButtonTapped() {
-        
+        delegate?.showLocation(self)
     }
     
 }
