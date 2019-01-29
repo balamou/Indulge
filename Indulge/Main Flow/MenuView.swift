@@ -10,10 +10,14 @@ import UIKit
 
 class MenuView: UIView {
     
+    var didLayoutAlready = false
+    let stackSpacing: CGFloat = 8.0
+    let padding: CGFloat = 10.0
+    var tagButtons: [UIButton] = []
+    
     lazy var topBarView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
-        view.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         
         return view
     }()
@@ -28,11 +32,35 @@ class MenuView: UIView {
         return btn
     }()
     
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillProportionally
+        stackView.spacing = stackSpacing
+        
+        return stackView
+    }()
+    
     lazy var tableView: UITableView = {
         let table = UITableView()
         
         return table
     }()
+    
+    func addStyle(_ btn: UIButton, _ color: UIColor){
+        let shadowLayer = CAShapeLayer()
+        shadowLayer.path = UIBezierPath(roundedRect: btn.bounds, cornerRadius: 25.0).cgPath
+        shadowLayer.fillColor = color.cgColor
+        
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        shadowLayer.shadowOpacity = 0.09
+        shadowLayer.shadowRadius = 4
+        
+        btn.layer.insertSublayer(shadowLayer, at: 0)
+    }
     
     class Constraints {
         
@@ -58,10 +86,9 @@ class MenuView: UIView {
         }
         
         static func setStackView(_ stackView: UIStackView, _ view: UIView) {
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            stackView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            stackView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            stackView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 5).isActive = true
+            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
+            stackView.heightAnchor.constraint(equalToConstant: 31).isActive = true
         }
     }
     
@@ -77,28 +104,36 @@ class MenuView: UIView {
         Constraints.setTopBarView(topBarView, self)
         Constraints.setLocationButton(locationButton, topBarView)
         Constraints.setTableView(tableView, self)
-        
-        generateTags(tags: ["Pastries", "Croissants"])
     }
-    
+
     func generateTags(tags: [String]){
         let tags = ["All"] + tags
         
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 5
+        var width: CGFloat = 0.0
         
         for item in tags {
             let tagButton = UIButton()
             tagButton.setTitle(item, for: .normal)
-            tagButton.backgroundColor = UIColor.red
+            tagButton.setTitleColor(UIColor.black, for: .normal)
+            tagButton.titleLabel?.font = UIFont(name: "BrandonGrotesque-Light", size: 20.0)
+            width += tagButton.intrinsicContentSize.width + stackSpacing + padding * 2
+            
+            tagButtons += [tagButton]
             stackView.addArrangedSubview(tagButton)
+            tagButton.translatesAutoresizingMaskIntoConstraints = false
         }
         
         topBarView.addSubviewLayout(stackView)
+        stackView.widthAnchor.constraint(equalToConstant: width).isActive = true // 🤨🤔 HACK
         Constraints.setStackView(stackView, locationButton)
+    }
+    
+    func viewDidLayoutSubviews() {
+        if (!didLayoutAlready) {
+            didLayoutAlready = true
+            
+            _ = tagButtons.map{addStyle($0, UIColor.white)}
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

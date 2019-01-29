@@ -19,8 +19,8 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         
-        let isUserLogged = false //TODO: jad
-        let locationSelected = false //TODO: jad
+        let isUserLogged = true //TODO: jad
+        let locationSelected = true //TODO: jad
         
         if (!isUserLogged && !locationSelected) {
             let welcomeViewConroller = WelcomeViewController()

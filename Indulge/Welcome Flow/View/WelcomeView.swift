@@ -49,7 +49,6 @@ class WelcomeView: UIView {
     lazy var loginButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Login", for: .normal)
-        //btn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Medium", size: 20.0)
         
