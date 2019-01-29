@@ -98,6 +98,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         let locationVC = LocationViewController()
         locationVC.delegate = self
         locationVC.doNotSetRoot = true
+        locationVC.first = false
         navigationController.pushViewController(locationVC, animated: true)
     }
     
