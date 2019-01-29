@@ -44,11 +44,12 @@ class MenuView: UIView {
     
     lazy var tableView: UITableView = {
         let table = UITableView()
+        table.allowsSelection = false
         
         return table
     }()
     
-    func addStyle(_ btn: UIButton, _ color: UIColor){
+    func addStyle(_ btn: UIButton, _ color: UIColor) {
         let shadowLayer = CAShapeLayer()
         shadowLayer.path = UIBezierPath(roundedRect: btn.bounds, cornerRadius: 25.0).cgPath
         shadowLayer.fillColor = color.cgColor
@@ -78,9 +79,9 @@ class MenuView: UIView {
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
         
-        static func setTableView(_ table: UITableView, _ view: UIView) {
+        static func setTableView(_ table: UITableView, _ topNeighbour: UIView, _ view: UIView) {
             table.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 10).isActive = true
+            table.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 10).isActive = true
             table.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             table.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         }
@@ -103,7 +104,7 @@ class MenuView: UIView {
         
         Constraints.setTopBarView(topBarView, self)
         Constraints.setLocationButton(locationButton, topBarView)
-        Constraints.setTableView(tableView, self)
+        Constraints.setTableView(tableView, topBarView, self)
     }
 
     func generateTags(tags: [String]){
@@ -124,7 +125,7 @@ class MenuView: UIView {
         }
         
         topBarView.addSubviewLayout(stackView)
-        stackView.widthAnchor.constraint(equalToConstant: width).isActive = true // 🤨🤔 HACK
+        stackView.widthAnchor.constraint(equalToConstant: width).isActive = true // 🤨🤔 HACK, calculated width on flight
         Constraints.setStackView(stackView, locationButton)
     }
     

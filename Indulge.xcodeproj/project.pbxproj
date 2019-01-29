@@ -52,6 +52,8 @@
 		ED68531D21FFDE36004B0628 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68531C21FFDE36004B0628 /* OrdersViewController.swift */; };
 		ED68531F21FFDE82004B0628 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68531E21FFDE82004B0628 /* OrdersView.swift */; };
 		ED68532121FFDE8E004B0628 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532021FFDE8E004B0628 /* SettingsView.swift */; };
+		ED68532422001AC8004B0628 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532322001AC8004B0628 /* ProductViewCell.swift */; };
+		ED68532E22008639004B0628 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532D22008639004B0628 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		ED68531C21FFDE36004B0628 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		ED68531E21FFDE82004B0628 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 		ED68532021FFDE8E004B0628 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ED68532322001AC8004B0628 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		ED68532D22008639004B0628 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 		ED26554F21FCC00D00523850 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
+				ED68532222001AAD004B0628 /* View Cell */,
 				ED26555021FCC02600523850 /* View */,
 				ED26554D21FCBAC900523850 /* MenuViewController.swift */,
 				ED26555321FD189000523850 /* CartViewController.swift */,
@@ -333,6 +338,15 @@
 				ED68531321FEB721004B0628 /* Coordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		ED68532222001AAD004B0628 /* View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ED68532D22008639004B0628 /* Product.swift */,
+				ED68532322001AC8004B0628 /* ProductViewCell.swift */,
+			);
+			name = "View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED68532422001AC8004B0628 /* ProductViewCell.swift in Sources */,
 				ED68531D21FFDE36004B0628 /* OrdersViewController.swift in Sources */,
 				ED68531F21FFDE82004B0628 /* OrdersView.swift in Sources */,
 				ED41DCE321FB469D00782353 /* LocationView.swift in Sources */,
@@ -493,6 +508,7 @@
 				ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */,
 				ED26555821FE5A0E00523850 /* StyledTextField.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
+				ED68532E22008639004B0628 /* Product.swift in Sources */,
 				ED26554621FC0DA800523850 /* LoginView.swift in Sources */,
 				ED26555421FD189000523850 /* CartViewController.swift in Sources */,
 				ED41DCDE21FABB0200782353 /* CreateAccountView.swift in Sources */,
