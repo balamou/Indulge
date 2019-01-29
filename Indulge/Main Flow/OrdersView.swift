@@ -23,7 +23,7 @@ class OrdersView: UIView {
         
         static func setOrdersLabel(_ label: UILabel, _ view: UIView) {
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            label.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
+            label.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 10).isActive = true
             label.widthAnchor.constraint(equalToConstant: 194).isActive = true
             label.heightAnchor.constraint(equalToConstant: 36).isActive = true
         }
