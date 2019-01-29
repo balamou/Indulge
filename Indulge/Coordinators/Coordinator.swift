@@ -25,11 +25,16 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         if (!isUserLogged && !locationSelected) {
             let welcomeViewConroller = WelcomeViewController()
             welcomeViewConroller.delegate = self
-            navigationController.pushViewController(welcomeViewConroller, animated: true)
+            navigationController.viewControllers = [welcomeViewConroller]
         } else if (isUserLogged && !locationSelected){
             // show location
+            let locationVC = LocationViewController()
+            locationVC.delegate = self
+            locationVC.first = false
+            navigationController.viewControllers = [locationVC]
         } else if (isUserLogged && locationSelected) {
             // show main in tab VC
+            navigationController = setupMain()
         }
     }
     
@@ -77,19 +82,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     func dismissLocation(_ viewController: LocationViewController) {
         
         if !viewController.doNotSetRoot {
-            let menuVC = MenuViewController()
-            let settingsVC = WelcomeViewController()
-            menuVC.delegate = self
-            
-            menuVC.title = "Menu"
-            settingsVC.title = "Settings"
-            
-            let tabViewConroller = UITabBarController()
-            tabViewConroller.viewControllers = [menuVC, settingsVC]
-            
-            let newNavController = UINavigationController()
-            newNavController.isNavigationBarHidden = true
-            newNavController.viewControllers = [tabViewConroller]
+            let newNavController = setupMain()
             
             window.switchRootViewController(newNavController, animated: true, completion: {
                 self.navigationController = newNavController
@@ -106,5 +99,27 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         locationVC.delegate = self
         locationVC.doNotSetRoot = true
         navigationController.pushViewController(locationVC, animated: true)
+    }
+    
+    private func setupMain() -> UINavigationController {
+        let menuVC = MenuViewController()
+        let ordersVC = OrdersViewController()
+        let settingsVC = SettingsViewController()
+        menuVC.delegate = self
+        //ordersVC.delegate = self
+        //settingsVC.delegate = self
+        
+        menuVC.title = "Menu"
+        ordersVC.title = "Orders"
+        settingsVC.title = "Settings"
+        
+        let tabViewConroller = UITabBarController()
+        tabViewConroller.viewControllers = [menuVC, ordersVC, settingsVC]
+        
+        let newNavController = UINavigationController()
+        newNavController.isNavigationBarHidden = true
+        newNavController.viewControllers = [tabViewConroller]
+        
+        return newNavController
     }
 }
