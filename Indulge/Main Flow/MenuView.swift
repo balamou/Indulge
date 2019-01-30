@@ -28,6 +28,10 @@ class MenuView: UIView {
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
         btn.titleLabel?.textAlignment = .center
+        btn.setImage(Images.locationPinImage, for: .normal)
+        btn.imageEdgeInsets.right = 10
+        btn.setTitleColor(#colorLiteral(red: 0.3046829104, green: 0.4996926188, blue: 1, alpha: 1), for: .highlighted)
+        btn.setImage(Images.locationPinSelectedImage, for: .highlighted)
         
         return btn
     }()
@@ -51,6 +55,15 @@ class MenuView: UIView {
         return table
     }()
     
+    lazy var checkoutButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("CHECKOUT", for: .normal)
+        btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
+        btn.isHidden = true
+        
+        return btn
+    }()
+    
     func addStyle(_ btn: UIButton, _ color: UIColor) {
         let shadowLayer = CAShapeLayer()
         shadowLayer.path = UIBezierPath(roundedRect: btn.bounds, cornerRadius: 25.0).cgPath
@@ -64,14 +77,6 @@ class MenuView: UIView {
         
         btn.layer.insertSublayer(shadowLayer, at: 0)
     }
-    
-    lazy var checkoutButton: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("CHECKOUT", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
-        
-        return btn
-    }()
     
     class Constraints {
         
@@ -135,6 +140,7 @@ class MenuView: UIView {
             let tagButton = UIButton()
             tagButton.setTitle(item, for: .normal)
             tagButton.setTitleColor(UIColor.black, for: .normal)
+            tagButton.setTitleColor(#colorLiteral(red: 0.3046829104, green: 0.4996926188, blue: 1, alpha: 1), for: .highlighted)
             tagButton.titleLabel?.font = UIFont(name: "BrandonGrotesque-Light", size: 20.0)
             width += tagButton.intrinsicContentSize.width + stackSpacing + padding * 2
             
