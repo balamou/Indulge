@@ -65,6 +65,14 @@ class MenuView: UIView {
         btn.layer.insertSublayer(shadowLayer, at: 0)
     }
     
+    lazy var checkoutButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("CHECKOUT", for: .normal)
+        btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
+        
+        return btn
+    }()
+    
     class Constraints {
         
         static func setTopBarView(_ top: UIView, _ view: UIView) {
@@ -93,6 +101,13 @@ class MenuView: UIView {
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
             stackView.heightAnchor.constraint(equalToConstant: 31).isActive = true
         }
+        
+        static func setCheckoutButton(_ btn: UIButton, _ view: UIView) {
+            btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            btn.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
+            btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        }
     }
     
     override init(frame: CGRect) {
@@ -103,10 +118,12 @@ class MenuView: UIView {
         self.addSubviewLayout(tableView)
         self.addSubviewLayout(topBarView)
         topBarView.addSubviewLayout(locationButton)
+        self.addSubviewLayout(checkoutButton)
         
         Constraints.setTopBarView(topBarView, self)
         Constraints.setLocationButton(locationButton, topBarView)
         Constraints.setTableView(tableView, topBarView, self)
+        Constraints.setCheckoutButton(checkoutButton, self)
     }
 
     func generateTags(tags: [String]){

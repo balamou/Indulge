@@ -71,16 +71,16 @@ class ProductViewCell : UITableViewCell {
             imageView.heightAnchor.constraint(equalToConstant: 162).isActive = true
         }
         
-        static func setProductLabel(_ label: UILabel, _ view: UIView) {
+        static func setProductNameLabel(_ label: UILabel, _ view: UIView) {
             label.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
-            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+            //label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             //label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
         
         static func setPriceLabel(_ label: UILabel, _ view: UIView) {
             label.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
+            label.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
             //label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             //label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
@@ -120,7 +120,7 @@ class ProductViewCell : UITableViewCell {
         self.addSubviewLayout(quantityLabel)
        
         Constraints.setProductImageView(productImageView, self)
-        Constraints.setProductLabel(productNameLabel, productImageView)
+        Constraints.setProductNameLabel(productNameLabel, productImageView)
         Constraints.setPriceLabel(priceLabel, productNameLabel)
         Constraints.setProductBarView(productBarView, productImageView, self, priceLabel)
         Constraints.setAddToCartButton(addToCartButton, productBarView)
