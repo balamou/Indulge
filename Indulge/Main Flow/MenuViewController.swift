@@ -29,7 +29,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         menuView.tableView.dataSource = self
         menuView.tableView.register(ProductViewCell.self, forCellReuseIdentifier: cellId)
         
-        menuView.generateTags(tags: ["Blicky", "Got", "The", "Stiffy", "Huh", "🤡"])
+        menuView.generateTags(tags: ["Pastries", "Cakes", "Vegan", "Gluten free"])
         
         menuView.locationButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
         _ = menuView.tagButtons.map{ $0.addTarget(self, action: #selector(self.tagTapped), for: .touchUpInside)}
