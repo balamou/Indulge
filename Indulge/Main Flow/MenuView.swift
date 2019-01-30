@@ -45,6 +45,8 @@ class MenuView: UIView {
     lazy var tableView: UITableView = {
         let table = UITableView()
         table.allowsSelection = false
+        table.separatorStyle = .none
+        table.backgroundColor = UIColor.clear
         
         return table
     }()

@@ -22,7 +22,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         //
         products += [Product(productName: "Millefeuille Desert with Raspberry", price: 3.99, quantity: 1, picture: #imageLiteral(resourceName: "test1"))]
         products += [Product(productName: "Chocolate raspberry cake", price: 5.99, quantity: 3, picture: #imageLiteral(resourceName: "test2"))]
-        products += [Product(productName: "Chocolate wrapped caramel", price: 2.99, quantity: 0, picture: #imageLiteral(resourceName: "test3"))]
+        products += [Product(productName: "Chocolate wrapped caramel", price: 2.99, quantity: 134, picture: #imageLiteral(resourceName: "test3"))]
         products += [Product(productName: "Glazed donut with caramel", price: 1.99, quantity: 0, picture: #imageLiteral(resourceName: "test1"))]
         //
         menuView.tableView.delegate = self
@@ -58,8 +58,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductViewCell
         let productData = products[indexPath.row]
         cell.productImageView.image = productData.picture
-        cell.priceLabel.text = String(productData.price)
+        cell.priceLabel.text = "$\(productData.price)"
         cell.productNameLabel.text = productData.productName
+        
+        if productData.quantity > 0 {
+            cell.quantityLabel.text = "x\(productData.quantity)"
+        }
         
         return cell
     }
