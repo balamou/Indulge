@@ -56,7 +56,6 @@ class ProductViewCell : UITableViewCell {
     
     let addToCartButton: UIButton = {
         let button = UIButton()
-        //button.setTitle("[+]", for: .normal)
         button.setImage(Images.addToCartButtonImage, for: .normal)
         button.setImage(Images.addToCartSelectedImage, for: .highlighted)
         

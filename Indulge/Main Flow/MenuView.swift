@@ -36,6 +36,14 @@ class MenuView: UIView {
         return btn
     }()
     
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.isScrollEnabled = true
+        
+        return scrollView
+    }()
+    
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -102,7 +110,7 @@ class MenuView: UIView {
         }
         
         static func setStackView(_ stackView: UIStackView, _ view: UIView) {
-            stackView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 5).isActive = true
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
             stackView.heightAnchor.constraint(equalToConstant: 31).isActive = true
         }
@@ -112,6 +120,12 @@ class MenuView: UIView {
             btn.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
             btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        }
+        
+        static func setScrollView(_ scrollView: UIScrollView, _ view: UIView) {
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            scrollView.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            scrollView.heightAnchor.constraint(equalToConstant: 42).isActive = true
         }
     }
     
@@ -123,12 +137,14 @@ class MenuView: UIView {
         self.addSubviewLayout(tableView)
         self.addSubviewLayout(topBarView)
         topBarView.addSubviewLayout(locationButton)
+        topBarView.addSubviewLayout(scrollView)
         self.addSubviewLayout(checkoutButton)
         
         Constraints.setTopBarView(topBarView, self)
         Constraints.setLocationButton(locationButton, topBarView)
         Constraints.setTableView(tableView, topBarView, self)
         Constraints.setCheckoutButton(checkoutButton, self)
+        Constraints.setScrollView(scrollView, locationButton)
     }
 
     func generateTags(tags: [String]){
@@ -149,9 +165,9 @@ class MenuView: UIView {
             tagButton.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        topBarView.addSubviewLayout(stackView)
+        scrollView.addSubviewLayout(stackView)
         stackView.widthAnchor.constraint(equalToConstant: width).isActive = true // 🤨🤔 HACK, calculated width on flight
-        Constraints.setStackView(stackView, locationButton)
+        Constraints.setStackView(stackView, scrollView)
     }
     
     func viewDidLayoutSubviews() {
@@ -159,6 +175,8 @@ class MenuView: UIView {
             didLayoutAlready = true
             
             _ = tagButtons.map{addStyle($0, UIColor.white)}
+            let contentSize = scrollView.contentSize
+            scrollView.contentSize = CGSize(width: stackView.frame.width, height: contentSize.height)
         }
     }
     
