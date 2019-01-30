@@ -12,27 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private var applicationCoordinator: ApplicationCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
+      
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let applicationCoordinator = ApplicationCoordinator(window: window)
         
-        // if (userLoggedIn != False) // TODO: if user not logged in -> Show welcome screen
-        // {
-        let welcomeNav = WelcomeNavigationController()
-        welcomeNav.viewControllers = [WelcomeViewController()]
-        
-        window!.rootViewController = welcomeNav
-        window!.makeKeyAndVisible()
-        // } else { // TODO: if user logged in -> Show main screen
-        
-        
-        // }
-        
-        // let names = UIFont.fontNames(forFamilyName: "Brandon Grotesque")
-        // print("Font names: \(names)")
-        
+        self.window = window
+        self.applicationCoordinator = applicationCoordinator
+        applicationCoordinator.start()
+      
         return true
     }
 

@@ -13,6 +13,9 @@ class LocationViewController: UIViewController {
     var stickToBottom: NSLayoutConstraint?
     var first = true // to avoid visual lag
     
+    weak var delegate: LocationDelegate?
+    var doNotSetRoot = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +34,7 @@ class LocationViewController: UIViewController {
     @objc func doneButtonTapped() {
         // TODO: 1. Check if location selected
         // TODO: 2. Open Menu View Controller
-        navigationController?.pushViewController(MenuViewController(), animated: true)
+        delegate?.dismissLocation(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,7 +55,7 @@ class LocationViewController: UIViewController {
         first = false
     }
     
-    func adjustingHeight(_ show: Bool, notification:NSNotification) {
+    func adjustingHeight(_ show: Bool, notification: NSNotification) {
         var userInfo = notification.userInfo!
         let keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let animationDurarion = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval

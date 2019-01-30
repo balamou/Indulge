@@ -9,7 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
     var loginView: LoginView!
+    weak var delegate: LoginDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +39,10 @@ class LoginViewController: UIViewController {
         // TODO: 1. Send request to the server
         // 2. Verify credentials (login & password)
         // 3. if success show location view ↓↓↓
-        navigationController?.pushViewController(LocationViewController(), animated: true)
+        delegate?.showLocation(self)
     }
     
     @objc func backButtonTapped(){
-        navigationController?.popViewController(animated: true)
+        delegate?.backButtonTapped(self)
     }
 }
