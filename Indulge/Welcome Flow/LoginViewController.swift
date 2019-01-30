@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     
     var loginView: LoginView!
     weak var delegate: LoginDelegate?
+    var previousConstraintForButton: NSLayoutConstraint?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,10 @@ class LoginViewController: UIViewController {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            loginView.continueButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight).isActive = true
+            
+            previousConstraintForButton?.isActive = false
+            previousConstraintForButton = loginView.continueButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight)
+            previousConstraintForButton?.isActive = true
         }
     }
     

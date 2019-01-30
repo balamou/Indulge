@@ -12,6 +12,7 @@ class CreateAccountViewController: UIViewController {
    
     var createAccountView: CreateAccountView!
     weak var delegate: CreateAccountDelegate?
+    var previousConstraintForButton: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,10 @@ class CreateAccountViewController: UIViewController {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            createAccountView.nextButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight).isActive = true
+           
+            previousConstraintForButton?.isActive = false
+            previousConstraintForButton = createAccountView.nextButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight)
+            previousConstraintForButton?.isActive = true
         }
     }
     
