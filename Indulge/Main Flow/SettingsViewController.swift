@@ -10,13 +10,18 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     var settingsView: SettingsView!
-    //weak var delegate: SettingsDelegate? // TODO
+    weak var delegate: SettingsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         settingsView = SettingsView(frame: self.view.frame)
         self.view = settingsView
+        settingsView.signOutButton.addTarget(self, action: #selector(signOutButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func signOutButtonTapped() {
+        delegate?.showWelcome(self)
     }
 }
 

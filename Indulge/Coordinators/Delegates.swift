@@ -34,3 +34,7 @@ protocol LocationDelegate: AnyObject {
 protocol MenuDelegate: AnyObject {
     func showLocation(_ viewController: MenuViewController)
 }
+
+protocol SettingsDelegate: AnyObject {
+    func showWelcome(_ viewController: SettingsViewController)
+}
