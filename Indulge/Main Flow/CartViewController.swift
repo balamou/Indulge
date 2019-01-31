@@ -17,10 +17,12 @@ class CartViewController: UIViewController {
         
         cartView = CartView(frame: self.view.frame)
         self.view = cartView
+        
+        cartView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
     }
     
-    @objc func locationButtonTapped() {
-        
+    @objc func closeButtonTapped() {
+        delegate?.exitToMenu(self)
     }
     
 }

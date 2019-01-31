@@ -42,4 +42,5 @@ protocol SettingsDelegate: AnyObject {
 
 protocol CartDelegate: AnyObject {
     func showPayment(_ viewController: CartViewController)
+    func exitToMenu(_ viewController: CartViewController)
 }

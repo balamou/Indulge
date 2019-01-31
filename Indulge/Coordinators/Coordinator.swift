@@ -18,8 +18,8 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         
-        let isUserLogged = false //TODO: jad
-        let locationSelected = false //TODO: jad
+        let isUserLogged = true //TODO: jad
+        let locationSelected = true //TODO: jad
         
         if (!isUserLogged && !locationSelected) {
             let welcomeViewConroller = WelcomeViewController()
@@ -138,6 +138,10 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     
     func showPayment(_ viewController: CartViewController) {
         // TODO:
+    }
+    
+    func exitToMenu(_ viewController: CartViewController) {
+        navigationController.popViewController(animated: true)
     }
     
     // MARK: Settings

@@ -17,4 +17,5 @@ class Images {
     static let addToCartButtonImage: UIImage = #imageLiteral(resourceName: "add_to_cart_button")
     static let addToCartSelectedImage: UIImage = #imageLiteral(resourceName: "add_to_cart_selected")
     static let exitButtonImage: UIImage = #imageLiteral(resourceName: "exit_button")
+    static let exitButtonTappedImage: UIImage = #imageLiteral(resourceName: "exit_button_tapped")
 }

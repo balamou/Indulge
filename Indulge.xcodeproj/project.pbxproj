@@ -200,9 +200,9 @@
 				ED26555021FCC02600523850 /* View */,
 				ED26554D21FCBAC900523850 /* MenuViewController.swift */,
 				ED26555321FD189000523850 /* CartViewController.swift */,
+				ED68532F22028CAA004B0628 /* PaymentViewController.swift */,
 				ED68531C21FFDE36004B0628 /* OrdersViewController.swift */,
 				ED68531A21FFDE2B004B0628 /* SettingsViewController.swift */,
-				ED68532F22028CAA004B0628 /* PaymentViewController.swift */,
 			);
 			path = "Main Flow";
 			sourceTree = "<group>";
