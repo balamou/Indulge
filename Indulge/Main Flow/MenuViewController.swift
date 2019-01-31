@@ -37,6 +37,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func tagTapped() {
+        self.parent?.add(QuantityViewController())
     }
     
     override func viewDidAppear(_ animated: Bool) {

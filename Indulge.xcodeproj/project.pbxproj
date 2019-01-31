@@ -55,6 +55,9 @@
 		ED68532422001AC8004B0628 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532322001AC8004B0628 /* ProductViewCell.swift */; };
 		ED68532E22008639004B0628 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532D22008639004B0628 /* Product.swift */; };
 		ED68533022028CAA004B0628 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532F22028CAA004B0628 /* PaymentViewController.swift */; };
+		ED6853322202A023004B0628 /* QuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853312202A023004B0628 /* QuantityViewController.swift */; };
+		ED6853342202A042004B0628 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853332202A042004B0628 /* QuantityView.swift */; };
+		ED6853362202A59B004B0628 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853352202A59B004B0628 /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		ED68532322001AC8004B0628 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		ED68532D22008639004B0628 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		ED68532F22028CAA004B0628 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		ED6853312202A023004B0628 /* QuantityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityViewController.swift; sourceTree = "<group>"; };
+		ED6853332202A042004B0628 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
+		ED6853352202A59B004B0628 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,7 @@
 				ED68532F22028CAA004B0628 /* PaymentViewController.swift */,
 				ED68531C21FFDE36004B0628 /* OrdersViewController.swift */,
 				ED68531A21FFDE2B004B0628 /* SettingsViewController.swift */,
+				ED6853312202A023004B0628 /* QuantityViewController.swift */,
 			);
 			path = "Main Flow";
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 				ED26555121FD188700523850 /* CartView.swift */,
 				ED68531E21FFDE82004B0628 /* OrdersView.swift */,
 				ED68532021FFDE8E004B0628 /* SettingsView.swift */,
+				ED6853332202A042004B0628 /* QuantityView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 				ED41DCC621F964E400782353 /* NSLayoutConstraint+extension.swift */,
 				ED41DCC821F9680500782353 /* UIView+extension.swift */,
 				ED68531621FFBF01004B0628 /* UIWindow+extension.swift */,
+				ED6853352202A59B004B0628 /* UIViewController+extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -503,7 +512,9 @@
 				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
 				ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */,
+				ED6853342202A042004B0628 /* QuantityView.swift in Sources */,
 				ED68533022028CAA004B0628 /* PaymentViewController.swift in Sources */,
+				ED6853322202A023004B0628 /* QuantityViewController.swift in Sources */,
 				ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED26554C21FCBA9800523850 /* MenuView.swift in Sources */,
@@ -520,6 +531,7 @@
 				ED26554E21FCBAC900523850 /* MenuViewController.swift in Sources */,
 				ED41DCE121FB3F3F00782353 /* BackButtonView.swift in Sources */,
 				ED26554A21FC14BA00523850 /* Images.swift in Sources */,
+				ED6853362202A59B004B0628 /* UIViewController+extension.swift in Sources */,
 				ED68532121FFDE8E004B0628 /* SettingsView.swift in Sources */,
 				ED41DCC421F8069900782353 /* UIColor+extension.swift in Sources */,
 				ED26555221FD188700523850 /* CartView.swift in Sources */,
