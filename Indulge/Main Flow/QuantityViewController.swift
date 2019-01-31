@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuantityViewController: UIViewController {
+class QuantityViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var quantityView: QuantityView!
     
@@ -17,5 +17,13 @@ class QuantityViewController: UIViewController {
         
         quantityView = QuantityView(frame: self.view.frame)
         self.view = quantityView
+        
+        let tap = UIGestureRecognizer(target: self, action: #selector(self.dismissQuantityView(_:)))
+        tap.delegate = self
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissQuantityView(_ sender:UITapGestureRecognizer) {
+        self.remove() // TODO: Fix gesture recognizer
     }
 }

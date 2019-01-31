@@ -19,6 +19,15 @@ class QuantityView: UIView {
         return view
     }()
     
+    lazy var productImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.red
+        imageView.image = #imageLiteral(resourceName: "test1")
+        imageView.contentMode = ContentMode.scaleAspectFill
+        
+        return imageView
+    }()
+    
     lazy var quantityLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
@@ -29,14 +38,14 @@ class QuantityView: UIView {
     
     lazy var increaseQntButton: UIButton = {
         let button = UIButton()
-        button.setImage(Images.addToCartButtonImage, for: .normal)
+        button.setImage(Images.increaseQuantityButtonImage, for: .normal)
         
         return button
     }()
     
     lazy var decreaseQntButton: UIButton = {
         let button = UIButton()
-        button.setImage(Images.addToCartButtonImage, for: .normal)
+        button.setImage(Images.decreaseQuantityButtonImage, for: .normal)
         
         return button
     }()
@@ -48,6 +57,13 @@ class QuantityView: UIView {
             overlay.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             overlay.widthAnchor.constraint(equalToConstant: 279).isActive = true
             overlay.heightAnchor.constraint(equalToConstant: 241).isActive = true
+        }
+        
+        static func setProductImageView(_ imageView: UIImageView, _ container: UIView) {
+            imageView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
+            imageView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+            imageView.widthAnchor.constraint(equalTo: container.widthAnchor).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: 155).isActive = true
         }
         
         static func setQuantityLabel(_ label: UILabel, _ container: UIView, _ center: UIView) {
@@ -71,14 +87,16 @@ class QuantityView: UIView {
         
         self.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6157159675)
         self.addSubviewLayout(whiteContainerView)
-        self.addSubviewLayout(increaseQntButton)
-        self.addSubviewLayout(decreaseQntButton)
-        self.addSubviewLayout(quantityLabel)
+        whiteContainerView.addSubviewLayout(increaseQntButton)
+        whiteContainerView.addSubviewLayout(decreaseQntButton)
+        whiteContainerView.addSubviewLayout(quantityLabel)
+        whiteContainerView.addSubviewLayout(productImageView)
         
         Constraints.setWhiteContainerView(whiteContainerView, self)
         Constraints.setIncreaseQntButton(increaseQntButton, whiteContainerView)
         Constraints.setDecreaseQntButton(decreaseQntButton, whiteContainerView)
         Constraints.setQuantityLabel(quantityLabel, whiteContainerView, increaseQntButton)
+        Constraints.setProductImageView(productImageView, whiteContainerView)
     }
     
     required init?(coder aDecoder: NSCoder) {
