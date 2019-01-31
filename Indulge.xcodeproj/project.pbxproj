@@ -54,6 +54,7 @@
 		ED68532121FFDE8E004B0628 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532021FFDE8E004B0628 /* SettingsView.swift */; };
 		ED68532422001AC8004B0628 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532322001AC8004B0628 /* ProductViewCell.swift */; };
 		ED68532E22008639004B0628 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532D22008639004B0628 /* Product.swift */; };
+		ED68533022028CAA004B0628 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68532F22028CAA004B0628 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		ED68532021FFDE8E004B0628 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ED68532322001AC8004B0628 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		ED68532D22008639004B0628 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		ED68532F22028CAA004B0628 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				ED26555321FD189000523850 /* CartViewController.swift */,
 				ED68531C21FFDE36004B0628 /* OrdersViewController.swift */,
 				ED68531A21FFDE2B004B0628 /* SettingsViewController.swift */,
+				ED68532F22028CAA004B0628 /* PaymentViewController.swift */,
 			);
 			path = "Main Flow";
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				ED41DCC921F9680500782353 /* UIView+extension.swift in Sources */,
 				ED41DC9321F8040000782353 /* WelcomeViewController.swift in Sources */,
 				ED26554821FC0DB300523850 /* LoginViewController.swift in Sources */,
+				ED68533022028CAA004B0628 /* PaymentViewController.swift in Sources */,
 				ED41DCE521FB46AD00782353 /* LocationViewController.swift in Sources */,
 				ED41DCC221F8064D00782353 /* Colors.swift in Sources */,
 				ED26554C21FCBA9800523850 /* MenuView.swift in Sources */,

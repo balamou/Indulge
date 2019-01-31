@@ -32,6 +32,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         menuView.generateTags(tags: ["Pastries", "Cakes", "Vegan", "Gluten free"])
         
         menuView.locationButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
+        menuView.checkoutButton.addTarget(self, action: #selector(checkoutButtonTapped), for: .touchUpInside)
         _ = menuView.tagButtons.map{ $0.addTarget(self, action: #selector(self.tagTapped), for: .touchUpInside)}
     }
     
@@ -48,6 +49,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func locationButtonTapped() {
         delegate?.showLocation(self)
+    }
+    
+    @objc func checkoutButtonTapped() {
+        delegate?.showCart(self)
     }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

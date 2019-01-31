@@ -67,7 +67,7 @@ class MenuView: UIView {
         let btn = UIButton()
         btn.setTitle("CHECKOUT", for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
-        btn.isHidden = true
+        //btn.isHidden = true
         
         return btn
     }()

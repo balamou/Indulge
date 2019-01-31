@@ -10,6 +10,7 @@ import UIKit
 
 class CartViewController: UIViewController {
     var cartView: CartView!
+    weak var delegate: CartDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegate, LoginDelegate, LocationDelegate, MenuDelegate, SettingsDelegate {
-  
+class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegate, LoginDelegate, LocationDelegate, MenuDelegate, SettingsDelegate, CartDelegate {
     let window: UIWindow
     var navigationController: UINavigationController
     
@@ -107,6 +106,12 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         navigationController.pushViewController(locationVC, animated: true)
     }
     
+    func showCart(_ viewController: MenuViewController) {
+        let cartVC = CartViewController()
+        cartVC.delegate = self
+        navigationController.pushViewController(cartVC, animated: true)
+    }
+    
     private func setupMain() -> UINavigationController {
         let menuVC = MenuViewController()
         let ordersVC = OrdersViewController()
@@ -129,6 +134,12 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         return newNavController
     }
     
+    // MARK: Cart
+    
+    func showPayment(_ viewController: CartViewController) {
+        // TODO:
+    }
+    
     // MARK: Settings
     
     func showWelcome(_ viewController: SettingsViewController) {
@@ -138,7 +149,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         welcomeViewConroller.delegate = self
         newNavController.viewControllers = [welcomeViewConroller]
         
-        window.switchRootViewController(newNavController, animated: true, completion: {
+        window.switchRootViewController(newNavController, options: UIView.AnimationOptions.curveEaseIn, completion: {
             self.navigationController = newNavController
         })
     }
