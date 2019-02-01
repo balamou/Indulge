@@ -172,7 +172,7 @@ class LocationView: UIView {
         
         static func setNewAddressBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
             barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 48).isActive = true
+            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 30).isActive = true
             barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
         }
@@ -184,8 +184,8 @@ class LocationView: UIView {
         static func setAddNewAddressTextField(_ textfield: UITextField, _ view: UIView) {
             textfield.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             textfield.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 54).isActive = true
-            textfield.widthAnchor.constraint(equalToConstant: 164).isActive = true
-            textfield.heightAnchor.constraint(equalToConstant: 27).isActive = true
+            textfield.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+            textfield.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         }
         
         static func setDoneButton(_ btn: UIButton, _ view: UIView) {
@@ -203,30 +203,24 @@ class LocationView: UIView {
         // Containers
         self.addSubviewLayout(locationButton)
         self.addSubviewLayout(asapBarView)
-        self.addSubviewLayout(preorderBarView)
         self.addSubviewLayout(newAddressBarView)
         self.addSubviewLayout(doneButton)
         
         // Subviews
         asapBarView.addSubviewLayout(asapLabel)
         asapBarView.addSubviewLayout(asapSelectorButton)
-        preorderBarView.addSubviewLayout(preorderLabel)
-        preorderBarView.addSubviewLayout(preorderSelectorButton)
         newAddressBarView.addSubviewLayout(addressIconImageView)
         newAddressBarView.addSubviewLayout(addNewAddressTextField)
         
         // Containers First
         Constraints.setLocationButton(locationButton, self)
         Constraints.setAsapBarView(asapBarView, self, topNeighbour: locationButton)
-        Constraints.setPreorderBarView(preorderBarView, self, topNeighbour: asapBarView)
-        Constraints.setNewAddressBarView(newAddressBarView, self, topNeighbour: preorderBarView)
+        Constraints.setNewAddressBarView(newAddressBarView, self, topNeighbour: asapBarView)
         Constraints.setDoneButton(doneButton, self)
         
         // Subviews next
         Constraints.setAsapLabel(asapLabel, asapBarView)
         Constraints.setAsapSelectorButton(asapSelectorButton, asapBarView)
-        Constraints.setPreorderLabel(preorderLabel, preorderBarView)
-        Constraints.setPreorderSelectorButton(preorderSelectorButton, preorderBarView)
         Constraints.setAddressIconImageView(addressIconImageView, newAddressBarView)
         Constraints.setAddNewAddressTextField(addNewAddressTextField, newAddressBarView)
     }
