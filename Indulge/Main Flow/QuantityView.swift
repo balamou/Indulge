@@ -24,6 +24,7 @@ class QuantityView: UIView {
         imageView.backgroundColor = UIColor.red
         imageView.image = #imageLiteral(resourceName: "test1")
         imageView.contentMode = ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
         
         return imageView
     }()
