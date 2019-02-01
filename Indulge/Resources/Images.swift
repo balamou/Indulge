@@ -22,4 +22,5 @@ class Images {
     static let decreaseQuantityButtonImage: UIImage = #imageLiteral(resourceName: "decrease_quantity_button")
     static let selectorOnImage: UIImage = #imageLiteral(resourceName: "selector_on")
     static let selectorOffImage: UIImage = #imageLiteral(resourceName: "selector_off")
+    static let plusIconImage: UIImage = #imageLiteral(resourceName: "plus_icon")
 }

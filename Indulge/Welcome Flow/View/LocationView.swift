@@ -16,9 +16,13 @@ class LocationView: UIView {
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
         btn.titleLabel?.textAlignment = .center
+        btn.setImage(Images.locationPinImage, for: .normal)
+        btn.imageEdgeInsets.right = 10
         
         return btn
     }()
+    
+    // MARK: ASAP
     
     lazy var asapBarView: UIView = {
         let view = UIView()
@@ -38,22 +42,14 @@ class LocationView: UIView {
         return label
     }()
     
-    lazy var preorderLabel: UILabel = {
-        var label = UILabel()
-        label.textColor = #colorLiteral(red: 0, green: 0.5764705882, blue: 1, alpha: 1)
-        label.text = "Pre-order for later"
-        label.font = UIFont(name: "Avenir-Book", size: 20)
+    lazy var asapSelectorButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Images.selectorOnImage, for: .normal)
         
-        return label
+        return button
     }()
     
-    lazy var addNewAddressTextField: UITextField = {
-        var textField = UITextField()
-        textField.placeholder = "Add new address"
-        textField.font = UIFont(name: "Avenir-Book", size: 20)
-        
-        return textField
-    }()
+    // MARK: PREORDER
     
     lazy var preorderBarView: UIView = {
         let view = UIView()
@@ -64,6 +60,24 @@ class LocationView: UIView {
         return view
     }()
     
+    lazy var preorderLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = #colorLiteral(red: 0, green: 0.5764705882, blue: 1, alpha: 1)
+        label.text = "Pre-order for later"
+        label.font = UIFont(name: "Avenir-Book", size: 20)
+        
+        return label
+    }()
+   
+    lazy var preorderSelectorButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Images.selectorOffImage, for: .normal)
+        
+        return button
+    }()
+    
+    // MARK: NEW ADDRESS
+    
     lazy var newAddressBarView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
@@ -72,7 +86,22 @@ class LocationView: UIView {
         
         return view
     }()
+
+    lazy var addressIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = Images.plusIconImage
+        
+        return imageView
+    }()
     
+    lazy var addNewAddressTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Add new address"
+        textField.font = UIFont(name: "Avenir-Book", size: 20)
+        
+        return textField
+    }()
+ 
     lazy var doneButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("DONE", for: .normal)
@@ -97,23 +126,11 @@ class LocationView: UIView {
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
         
+        // MARK: ASAP Constraints
+        
         static func setAsapBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
             barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 40).isActive = true
-            barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
-        }
-        
-        static func setPreorderBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
-            barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 1).isActive = true
-            barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
-        }
-        
-        static func setNewAddressBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
-            barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 48).isActive = true
             barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
         }
@@ -125,6 +142,20 @@ class LocationView: UIView {
             label.heightAnchor.constraint(equalToConstant: 27).isActive = true
         }
         
+        static func setAsapSelectorButton(_ button: UIButton, _ view: UIView) {
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        }
+        
+        // MARK: Preorder Constraints
+        
+        static func setPreorderBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
+            barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 1).isActive = true
+            barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        }
+        
         static func setPreorderLabel(_ label: UILabel, _ view: UIView) {
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 17).isActive = true
@@ -132,6 +163,24 @@ class LocationView: UIView {
             label.heightAnchor.constraint(equalToConstant: 27).isActive = true
         }
         
+        static func setPreorderSelectorButton(_ button: UIButton, _ view: UIView) {
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        }
+        
+        // MARK: New address Constraints
+        
+        static func setNewAddressBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
+            barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            barView.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 48).isActive = true
+            barView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            barView.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        }
+        
+        static func setAddressIconImageView(_ imageView: UIImageView, _ view: UIView) {
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        }
         static func setAddNewAddressTextField(_ textfield: UITextField, _ view: UIView) {
             textfield.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             textfield.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 54).isActive = true
@@ -141,7 +190,6 @@ class LocationView: UIView {
         
         static func setDoneButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            //btn.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
@@ -152,24 +200,34 @@ class LocationView: UIView {
         
         self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
+        // Containers
         self.addSubviewLayout(locationButton)
         self.addSubviewLayout(asapBarView)
         self.addSubviewLayout(preorderBarView)
-        self.addSubviewLayout(doneButton)
         self.addSubviewLayout(newAddressBarView)
+        self.addSubviewLayout(doneButton)
         
+        // Subviews
         asapBarView.addSubviewLayout(asapLabel)
+        asapBarView.addSubviewLayout(asapSelectorButton)
         preorderBarView.addSubviewLayout(preorderLabel)
+        preorderBarView.addSubviewLayout(preorderSelectorButton)
+        newAddressBarView.addSubviewLayout(addressIconImageView)
         newAddressBarView.addSubviewLayout(addNewAddressTextField)
         
+        // Containers First
         Constraints.setLocationButton(locationButton, self)
         Constraints.setAsapBarView(asapBarView, self, topNeighbour: locationButton)
         Constraints.setPreorderBarView(preorderBarView, self, topNeighbour: asapBarView)
         Constraints.setNewAddressBarView(newAddressBarView, self, topNeighbour: preorderBarView)
         Constraints.setDoneButton(doneButton, self)
         
+        // Subviews next
         Constraints.setAsapLabel(asapLabel, asapBarView)
+        Constraints.setAsapSelectorButton(asapSelectorButton, asapBarView)
         Constraints.setPreorderLabel(preorderLabel, preorderBarView)
+        Constraints.setPreorderSelectorButton(preorderSelectorButton, preorderBarView)
+        Constraints.setAddressIconImageView(addressIconImageView, newAddressBarView)
         Constraints.setAddNewAddressTextField(addNewAddressTextField, newAddressBarView)
     }
     
