@@ -32,6 +32,8 @@ class LocationViewController: UIViewController {
         
         locationView.addressSuggestionTable.delegate = self
         locationView.addressSuggestionTable.dataSource = self
+        
+        locationView.addNewAddressTextField.addTarget(self, action: #selector(isWritingAddress(_:)), for: UIControl.Event.editingDidBegin)
     }
     
     @objc func doneButtonTapped() {
@@ -72,6 +74,10 @@ class LocationViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    @objc func isWritingAddress(_ sender: UITextField) {
+        print(sender.text)
     }
 }
 

@@ -110,6 +110,7 @@ class LocationView: UIView {
         table.allowsSelection = false
         let inset = table.separatorInset
         table.separatorInset = UIEdgeInsets.init(top: inset.top, left: 0, bottom: inset.bottom, right: inset.right)
+        table.isHidden = true
         
         return table
     }()
