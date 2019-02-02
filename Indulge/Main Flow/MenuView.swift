@@ -59,6 +59,7 @@ class MenuView: UIView {
         table.allowsSelection = false
         table.separatorStyle = .none
         table.backgroundColor = UIColor.clear
+        table.register(ProductViewCell.self, forCellReuseIdentifier: ProductViewCell.cellid)
         
         return table
     }()

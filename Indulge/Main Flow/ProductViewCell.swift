@@ -11,6 +11,7 @@ import UIKit
 class ProductViewCell : UITableViewCell {
     // var delegate: ProductCellDelegate?
     static let height: CGFloat = 243.0
+    static let cellid = "Product cell"
     
     let productImageView: UIImageView = {
         let imageView = UIImageView()
