@@ -11,6 +11,7 @@ import UIKit
 class ProductViewCell : UITableViewCell {
     // var delegate: ProductCellDelegate?
     static let height: CGFloat = 243.0
+    static let cellid = "Product cell"
     
     let productImageView: UIImageView = {
         let imageView = UIImageView()
@@ -62,6 +63,13 @@ class ProductViewCell : UITableViewCell {
         return button
     }()
     
+    func addShadow(_ view: UIView, shadowOpacity: Float = 0.05, shadowRadius: CGFloat = 5.0) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOpacity = shadowOpacity
+        view.layer.shadowRadius = shadowRadius
+    }
+    
     class Constraints {
         
         static func setProductImageView(_ imageView: UIImageView, _ view: UIView) {
@@ -74,15 +82,11 @@ class ProductViewCell : UITableViewCell {
         static func setProductNameLabel(_ label: UILabel, _ view: UIView) {
             label.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-            //label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            //label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
         
         static func setPriceLabel(_ label: UILabel, _ view: UIView) {
             label.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             label.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-            //label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            //label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
         
         static func setAddToCartButton(_ button: UIButton, _ view: UIView) {
@@ -102,8 +106,6 @@ class ProductViewCell : UITableViewCell {
         static func setQuantityLabel(_ label: UILabel, _ view: UIView) {
             label.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
             label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5).isActive = true
-            //label.widthAnchor.constraint(equalToConstant: 100).isActive = true
-            //label.heightAnchor.constraint(equalToConstant: 100).isActive = true
         }
     }
     
@@ -118,7 +120,9 @@ class ProductViewCell : UITableViewCell {
         self.addSubviewLayout(priceLabel)
         self.addSubviewLayout(addToCartButton)
         self.addSubviewLayout(quantityLabel)
-       
+        
+        addShadow(productBarView, shadowOpacity: 0.08, shadowRadius: 7.0)
+        
         Constraints.setProductImageView(productImageView, self)
         Constraints.setProductNameLabel(productNameLabel, productImageView)
         Constraints.setPriceLabel(priceLabel, productNameLabel)
@@ -130,6 +134,4 @@ class ProductViewCell : UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
 }

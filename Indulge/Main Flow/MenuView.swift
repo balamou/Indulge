@@ -54,11 +54,12 @@ class MenuView: UIView {
         return stackView
     }()
     
-    lazy var tableView: UITableView = {
+    lazy var productsTable: UITableView = {
         let table = UITableView()
         table.allowsSelection = false
         table.separatorStyle = .none
         table.backgroundColor = UIColor.clear
+        table.register(ProductViewCell.self, forCellReuseIdentifier: ProductViewCell.cellid)
         
         return table
     }()
@@ -67,7 +68,7 @@ class MenuView: UIView {
         let btn = UIButton()
         btn.setTitle("CHECKOUT", for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
-        btn.isHidden = true
+        //btn.isHidden = true
         
         return btn
     }()
@@ -102,7 +103,7 @@ class MenuView: UIView {
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
         
-        static func setTableView(_ table: UITableView, _ topNeighbour: UIView, _ view: UIView) {
+        static func setProductsTable(_ table: UITableView, _ topNeighbour: UIView, _ view: UIView) {
             table.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             table.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 10).isActive = true
             table.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
@@ -134,7 +135,7 @@ class MenuView: UIView {
         
         self.layer.insertSublayer(Colors.backround(self.bounds), at: 0)
         
-        self.addSubviewLayout(tableView)
+        self.addSubviewLayout(productsTable)
         self.addSubviewLayout(topBarView)
         topBarView.addSubviewLayout(locationButton)
         topBarView.addSubviewLayout(scrollView)
@@ -142,7 +143,7 @@ class MenuView: UIView {
         
         Constraints.setTopBarView(topBarView, self)
         Constraints.setLocationButton(locationButton, topBarView)
-        Constraints.setTableView(tableView, topBarView, self)
+        Constraints.setProductsTable(productsTable, topBarView, self)
         Constraints.setCheckoutButton(checkoutButton, self)
         Constraints.setScrollView(scrollView, locationButton)
     }

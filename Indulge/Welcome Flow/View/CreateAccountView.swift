@@ -10,46 +10,57 @@ import UIKit
 
 class CreateAccountView: BackButtonView {
     
+    let texfieldFontSize: CGFloat = 18.0
+    
     lazy var createAccountLabel: UILabel = {
         let label = UILabel()
         label.text = "Create an Account"
         label.textAlignment = .center
-        label.font = UIFont(name: "BrandonGrotesque-Light", size: 25)
+        label.font = UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
         
         return label
     }()
     
-    lazy var fullNameField: UITextField = {
-        let textField = UITextField()
+    lazy var fullNameField: StyledTextField = {
+        let textField = StyledTextField()
         textField.placeholder = "Full name"
+        textField.font =  UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
         
         return textField
     }()
     
-    lazy var emailField: UITextField = {
-        let textField = UITextField()
+    lazy var emailField: StyledTextField = {
+        let textField = StyledTextField()
         textField.placeholder = "Email"
+        textField.font =  UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
+        textField.keyboardType = UIKeyboardType.emailAddress
         
         return textField
     }()
     
-    lazy var phoneNumberField: UITextField = {
-        let textField = UITextField()
+    lazy var phoneNumberField: StyledTextField = {
+        let textField = StyledTextField()
         textField.placeholder = "Phone number"
+        textField.font =  UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
+        textField.keyboardType = UIKeyboardType.phonePad
         
         return textField
     }()
     
-    lazy var passwordField: UITextField = {
-        let textField = UITextField()
+    lazy var passwordField: StyledTextField = {
+        let textField = StyledTextField()
         textField.placeholder = "Password"
+        textField.font =  UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
+        textField.isSecureTextEntry = true
         
         return textField
     }()
     
-    lazy var confirmPasswordField: UITextField = {
-        let textField = UITextField()
+    lazy var confirmPasswordField: StyledTextField = {
+        let textField = StyledTextField()
         textField.placeholder = "Confirm password"
+        textField.font =  UIFont(name: "BrandonGrotesque-Light", size: texfieldFontSize)
+        textField.isSecureTextEntry = true
         
         return textField
     }()
@@ -74,41 +85,40 @@ class CreateAccountView: BackButtonView {
         static func setFullNameField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 18).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 259).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         }
         
         static func setEmailField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 259).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         }
         
         static func setPhoneNumberField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 259).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         }
         
         static func setPasswordField(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 38).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 259).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         }
         
         static func setConfirmPassword(_ textField: UITextField, _ view: UIView) {
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             textField.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
-            textField.widthAnchor.constraint(equalToConstant: 194).isActive = true
-            textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            textField.widthAnchor.constraint(equalToConstant: 259).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         }
         
         static func setNextButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 396).isActive = true
             btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
@@ -134,6 +144,14 @@ class CreateAccountView: BackButtonView {
         Constraints.setPasswordField(passwordField, phoneNumberField)
         Constraints.setConfirmPassword(confirmPasswordField, passwordField)
         Constraints.setNextButton(nextButton, self)
+    }
+    
+    func viewDidLayoutSubviews() {
+        fullNameField.viewDidLayoutSubviews()
+        emailField.viewDidLayoutSubviews()
+        phoneNumberField.viewDidLayoutSubviews()
+        passwordField.viewDidLayoutSubviews()
+        confirmPasswordField.viewDidLayoutSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) {

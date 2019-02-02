@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegate, LoginDelegate, LocationDelegate, MenuDelegate {
-  
+class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegate, LoginDelegate, LocationDelegate, MenuDelegate, SettingsDelegate, CartDelegate {
     let window: UIWindow
     var navigationController: UINavigationController
     
@@ -44,6 +43,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     }
     
     // MARK: Welcome
+    
     func showLogin(_ viewController: WelcomeViewController) {
         let loginVC = LoginViewController()
         loginVC.delegate = self
@@ -57,6 +57,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     }
     
     // MARK: Create Acount
+    
     func showLocation(_ viewController: CreateAccountViewController) {
         let locationVC = LocationViewController()
         locationVC.delegate = self
@@ -68,6 +69,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     }
     
     // MARK: Login
+    
     func showLocation(_ viewController: LoginViewController) {
         let locationVC = LocationViewController()
         locationVC.delegate = self
@@ -79,6 +81,7 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
     }
     
     // MARK: Location
+    
     func dismissLocation(_ viewController: LocationViewController) {
         
         if !viewController.doNotSetRoot {
@@ -93,7 +96,8 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         
     }
     
-    // MARK: menu
+    // MARK: Menu
+    
     func showLocation(_ viewController: MenuViewController) {
         let locationVC = LocationViewController()
         locationVC.delegate = self
@@ -102,13 +106,19 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         navigationController.pushViewController(locationVC, animated: true)
     }
     
+    func showCart(_ viewController: MenuViewController) {
+        let cartVC = CartViewController()
+        cartVC.delegate = self
+        navigationController.pushViewController(cartVC, animated: true)
+    }
+    
     private func setupMain() -> UINavigationController {
         let menuVC = MenuViewController()
         let ordersVC = OrdersViewController()
         let settingsVC = SettingsViewController()
         menuVC.delegate = self
         //ordersVC.delegate = self
-        //settingsVC.delegate = self
+        settingsVC.delegate = self
         
         menuVC.title = "Menu"
         ordersVC.title = "Orders"
@@ -122,5 +132,29 @@ class ApplicationCoordinator: Coordinator, WelcomeDelegate, CreateAccountDelegat
         newNavController.viewControllers = [tabViewConroller]
         
         return newNavController
+    }
+    
+    // MARK: Cart
+    
+    func showPayment(_ viewController: CartViewController) {
+        // TODO:
+    }
+    
+    func exitToMenu(_ viewController: CartViewController) {
+        navigationController.popViewController(animated: true)
+    }
+    
+    // MARK: Settings
+    
+    func showWelcome(_ viewController: SettingsViewController) {
+        let newNavController = UINavigationController()
+        newNavController.isNavigationBarHidden = true
+        let welcomeViewConroller = WelcomeViewController()
+        welcomeViewConroller.delegate = self
+        newNavController.viewControllers = [welcomeViewConroller]
+        
+        window.switchRootViewController(newNavController, options: UIView.AnimationOptions.curveEaseIn, completion: {
+            self.navigationController = newNavController
+        })
     }
 }

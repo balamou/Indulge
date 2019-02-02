@@ -33,4 +33,14 @@ protocol LocationDelegate: AnyObject {
 
 protocol MenuDelegate: AnyObject {
     func showLocation(_ viewController: MenuViewController)
+    func showCart(_ viewController: MenuViewController)
+}
+
+protocol SettingsDelegate: AnyObject {
+    func showWelcome(_ viewController: SettingsViewController)
+}
+
+protocol CartDelegate: AnyObject {
+    func showPayment(_ viewController: CartViewController)
+    func exitToMenu(_ viewController: CartViewController)
 }

@@ -12,6 +12,7 @@ class CreateAccountViewController: UIViewController {
    
     var createAccountView: CreateAccountView!
     weak var delegate: CreateAccountDelegate?
+    var previousConstraintForButton: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class CreateAccountViewController: UIViewController {
         
         createAccountView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         createAccountView.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +36,21 @@ class CreateAccountViewController: UIViewController {
         super.viewDidAppear(animated)
         
         createAccountView.fullNameField.becomeFirstResponder()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        createAccountView.viewDidLayoutSubviews()
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+           
+            previousConstraintForButton?.isActive = false
+            previousConstraintForButton = createAccountView.nextButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight)
+            previousConstraintForButton?.isActive = true
+        }
     }
     
     @objc func nextButtonTapped() {

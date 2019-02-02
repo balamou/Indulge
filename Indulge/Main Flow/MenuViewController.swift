@@ -8,34 +8,46 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuViewController: UIViewController {
+    
     var menuView: MenuView!
+    var products: [Product] = []
     weak var delegate: MenuDelegate?
-    let cellId = "cellId"
-    var products : [Product] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuView = MenuView(frame: self.view.frame)
         self.view = menuView
-        //
+        
+        loadProducts()
+        
+        menuView.productsTable.delegate = self
+        menuView.productsTable.dataSource = self
+        
+        menuView.generateTags(tags: loadTags())
+        
+        // Assign actions
+        menuView.locationButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
+        menuView.checkoutButton.addTarget(self, action: #selector(checkoutButtonTapped), for: .touchUpInside)
+        _ = menuView.tagButtons.map{ $0.addTarget(self, action: #selector(self.tagTapped), for: .touchUpInside)}
+    }
+    
+    func loadProducts() {
         products += [Product(productName: "Millefeuille Desert with Raspberry", price: 3.99, quantity: 1, picture: #imageLiteral(resourceName: "test1"))]
         products += [Product(productName: "Chocolate raspberry cake", price: 5.99, quantity: 3, picture: #imageLiteral(resourceName: "test2"))]
         products += [Product(productName: "Chocolate wrapped caramel", price: 2.99, quantity: 134, picture: #imageLiteral(resourceName: "test3"))]
         products += [Product(productName: "Glazed donut with caramel", price: 1.99, quantity: 0, picture: #imageLiteral(resourceName: "test1"))]
-        //
-        menuView.tableView.delegate = self
-        menuView.tableView.dataSource = self
-        menuView.tableView.register(ProductViewCell.self, forCellReuseIdentifier: cellId)
-        
-        menuView.generateTags(tags: ["Blicky", "Got", "The", "Stiffy", "Huh", "🤡"])
-        
-        menuView.locationButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
-        _ = menuView.tagButtons.map{ $0.addTarget(self, action: #selector(self.tagTapped), for: .touchUpInside)}
     }
     
-    @objc func tagTapped() {
+    func loadTags() -> [String] {
+        return ["Pastries", "Cakes", "Vegan", "Gluten free"]
+    }
+    
+    @objc func tagTapped(_ sender: UIButton) {
+        //self.parent?.add(QuantityViewController())
+        print(sender.titleLabel?.text ?? " -- ")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,13 +61,21 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func locationButtonTapped() {
         delegate?.showLocation(self)
     }
- 
+    
+    @objc func checkoutButtonTapped() {
+        delegate?.showCart(self)
+    }
+}
+
+
+extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.cellid, for: indexPath) as! ProductViewCell
         let productData = products[indexPath.row]
         cell.productImageView.image = productData.picture
         cell.priceLabel.text = "$\(productData.price)"
