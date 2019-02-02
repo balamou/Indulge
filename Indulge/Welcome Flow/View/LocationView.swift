@@ -101,6 +101,18 @@ class LocationView: UIView {
         
         return textField
     }()
+    
+    // MARK: Address Suggestion Table
+    
+    lazy var addressSuggestionTable: UITableView = {
+        let table = UITableView()
+        table.register(SuggestionViewCell.self, forCellReuseIdentifier: SuggestionViewCell.cellid)
+        table.allowsSelection = false
+        let inset = table.separatorInset
+        table.separatorInset = UIEdgeInsets.init(top: inset.top, left: 0, bottom: inset.bottom, right: inset.right)
+        
+        return table
+    }()
  
     lazy var doneButton: UIButton = {
         let btn = UIButton()
@@ -126,7 +138,7 @@ class LocationView: UIView {
             btn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         }
         
-        // MARK: ASAP Constraints
+        // MARK: ASAP - Constraints
         
         static func setAsapBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
             barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -147,7 +159,7 @@ class LocationView: UIView {
             button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         }
         
-        // MARK: Preorder Constraints
+        // MARK: Preorder - Constraints
         
         static func setPreorderBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
             barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -168,7 +180,7 @@ class LocationView: UIView {
             button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         }
         
-        // MARK: New address Constraints
+        // MARK: New address - Constraints
         
         static func setNewAddressBarView(_ barView: UIView, _ view: UIView, topNeighbour: UIView) {
             barView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -188,6 +200,15 @@ class LocationView: UIView {
             textfield.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         }
         
+        // MARK: Address suggestion table - Constraints
+        
+        static func setAddressSuggestionTable(_ table: UITableView, _ topNeighbour: UIView, _ view: UIView) {
+            table.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            table.widthAnchor.constraint(equalTo: topNeighbour.widthAnchor).isActive = true
+            table.topAnchor.constraint(equalTo: topNeighbour.bottomAnchor, constant: 2).isActive = true
+            table.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        }
+        
         static func setDoneButton(_ btn: UIButton, _ view: UIView) {
             btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             btn.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
@@ -205,6 +226,7 @@ class LocationView: UIView {
         self.addSubviewLayout(asapBarView)
         self.addSubviewLayout(newAddressBarView)
         self.addSubviewLayout(doneButton)
+        self.addSubviewLayout(addressSuggestionTable)
         
         // Subviews
         asapBarView.addSubviewLayout(asapLabel)
@@ -217,6 +239,7 @@ class LocationView: UIView {
         Constraints.setAsapBarView(asapBarView, self, topNeighbour: locationButton)
         Constraints.setNewAddressBarView(newAddressBarView, self, topNeighbour: asapBarView)
         Constraints.setDoneButton(doneButton, self)
+        Constraints.setAddressSuggestionTable(addressSuggestionTable, newAddressBarView, self)
         
         // Subviews next
         Constraints.setAsapLabel(asapLabel, asapBarView)

@@ -58,6 +58,7 @@
 		ED6853322202A023004B0628 /* QuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853312202A023004B0628 /* QuantityViewController.swift */; };
 		ED6853342202A042004B0628 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853332202A042004B0628 /* QuantityView.swift */; };
 		ED6853362202A59B004B0628 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6853352202A59B004B0628 /* UIViewController+extension.swift */; };
+		ED68533922048196004B0628 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68533822048196004B0628 /* SuggestionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		ED6853312202A023004B0628 /* QuantityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityViewController.swift; sourceTree = "<group>"; };
 		ED6853332202A042004B0628 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
 		ED6853352202A59B004B0628 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		ED68533822048196004B0628 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 		ED41DCCA21F96CE300782353 /* Welcome Flow */ = {
 			isa = PBXGroup;
 			children = (
+				ED6853372204815F004B0628 /* View Cell */,
 				ED41DCDF21FB3F2300782353 /* Common */,
 				ED41DCD021FA7F7A00782353 /* View */,
 				ED41DC9221F8040000782353 /* WelcomeViewController.swift */,
@@ -359,6 +362,14 @@
 				ED68532322001AC8004B0628 /* ProductViewCell.swift */,
 			);
 			name = "View Cell";
+			sourceTree = "<group>";
+		};
+		ED6853372204815F004B0628 /* View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ED68533822048196004B0628 /* SuggestionViewCell.swift */,
+			);
+			path = "View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +534,7 @@
 				ED41DCDC21FABAE100782353 /* CreateAccountViewController.swift in Sources */,
 				ED26555821FE5A0E00523850 /* StyledTextField.swift in Sources */,
 				ED41DC9121F8040000782353 /* AppDelegate.swift in Sources */,
+				ED68533922048196004B0628 /* SuggestionViewCell.swift in Sources */,
 				ED68532E22008639004B0628 /* Product.swift in Sources */,
 				ED26554621FC0DA800523850 /* LoginView.swift in Sources */,
 				ED26555421FD189000523850 /* CartViewController.swift in Sources */,

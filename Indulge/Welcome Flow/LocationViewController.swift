@@ -29,6 +29,9 @@ class LocationViewController: UIViewController {
         
         stickToBottom = locationView.doneButton.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         stickToBottom?.isActive = true
+        
+        locationView.addressSuggestionTable.delegate = self
+        locationView.addressSuggestionTable.dataSource = self
     }
     
     @objc func doneButtonTapped() {
@@ -69,5 +72,23 @@ class LocationViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+
+extension LocationViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SuggestionViewCell.cellid, for: indexPath) as! SuggestionViewCell
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return SuggestionViewCell.height
     }
 }
