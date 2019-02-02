@@ -23,8 +23,8 @@ class MenuViewController: UIViewController {
         
         loadProducts()
         
-        menuView.tableView.delegate = self
-        menuView.tableView.dataSource = self
+        menuView.productsTable.delegate = self
+        menuView.productsTable.dataSource = self
         
         menuView.generateTags(tags: loadTags())
         

@@ -122,7 +122,7 @@ class ProductViewCell : UITableViewCell {
         self.addSubviewLayout(quantityLabel)
         
         addShadow(productBarView, shadowOpacity: 0.08, shadowRadius: 7.0)
-       
+        
         Constraints.setProductImageView(productImageView, self)
         Constraints.setProductNameLabel(productNameLabel, productImageView)
         Constraints.setPriceLabel(priceLabel, productNameLabel)
