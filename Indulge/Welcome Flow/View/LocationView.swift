@@ -225,8 +225,8 @@ class LocationView: UIView {
         self.addSubviewLayout(locationButton)
         self.addSubviewLayout(asapBarView)
         self.addSubviewLayout(newAddressBarView)
-        self.addSubviewLayout(doneButton)
         self.addSubviewLayout(addressSuggestionTable)
+        self.addSubviewLayout(doneButton)
         
         // Subviews
         asapBarView.addSubviewLayout(asapLabel)

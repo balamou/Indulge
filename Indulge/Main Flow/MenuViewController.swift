@@ -45,8 +45,9 @@ class MenuViewController: UIViewController {
         return ["Pastries", "Cakes", "Vegan", "Gluten free"]
     }
     
-    @objc func tagTapped() {
-        self.parent?.add(QuantityViewController())
+    @objc func tagTapped(_ sender: UIButton) {
+        //self.parent?.add(QuantityViewController())
+        print(sender.titleLabel?.text ?? " -- ")
     }
     
     override func viewDidAppear(_ animated: Bool) {
